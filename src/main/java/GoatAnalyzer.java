@@ -63,6 +63,7 @@ public abstract class GoatAnalyzer  {
     }
 
     public void print(int topXPlayers) {
+        rankedData.get(0).goatCase();
         rankedData.stream()
                 .limit(topXPlayers)
                 .forEach((player)-> System.out.println(player));

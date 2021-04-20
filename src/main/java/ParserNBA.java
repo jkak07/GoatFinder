@@ -83,11 +83,11 @@ public class ParserNBA implements IParser {
 
                 }
 
-                final BasketBallPlayerNBA nba = new BasketBallPlayerNBA(name, position, age, playerStats);
+                final BasketBallPlayerNBA nbaPlayer = new BasketBallPlayerNBA(name, position, age, playerStats);
 
-                if(!dataRows.contains(nba)){
+                if(!dataRows.contains(nbaPlayer)){
 
-                    dataRows.add(nba);
+                    dataRows.add(nbaPlayer);
                 }
 
 
@@ -105,7 +105,7 @@ public class ParserNBA implements IParser {
         return this.dataCols;
     }
 
-    public List<? extends IGoat> getDataRows(){
+    public List<BasketBallPlayerNBA> getDataRows(){
         return this.dataRows;
     }
 
