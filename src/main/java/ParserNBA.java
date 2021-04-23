@@ -52,7 +52,6 @@ public class ParserNBA implements IParser {
 
                 for(int i = 0; i < playerInfo.length; i++){
 
-
                     String colName = colNames[i];
 
                     switch(colName){
@@ -67,30 +66,18 @@ public class ParserNBA implements IParser {
                             break;
                         case "G":
                             playerStats.setPeriod(Double.parseDouble(playerInfo[i]));
-                            dataCols.computeIfAbsent(colName, k -> new ArrayList<>()).add(playerStats.getPeriod());
+                            dataCols.computeIfAbsent(PERIOD, k -> new ArrayList<>()).add(playerStats.getPeriod());
                             break;
                     }
 
                     if (goatFields.containsKey(colNames[i])) {
-                        double statValue = ((!playerInfo[i].isEmpty())) ? Double.parseDouble(playerInfo[i]): 0;
+                        double statValue = (!playerInfo[i].isEmpty()) ? Double.parseDouble(playerInfo[i]): 0;
                         playerStats.getStatHolder().put(colNames[i], statValue);
-                        playerStats.getWeightingHolder().put(colNames[i], goatFields.get(colNames[i]));
-
                         dataCols.computeIfAbsent(colNames[i], k -> new ArrayList<>()).add(statValue);
 
                     }
-
-
                 }
-
-                final BasketBallPlayerNBA nbaPlayer = new BasketBallPlayerNBA(name, position, age, playerStats);
-
-                if(!dataRows.contains(nbaPlayer)){
-
-                    dataRows.add(nbaPlayer);
-                }
-
-
+                storeGoat(name, position, age, playerStats);
             }
             reader.close();
         }
@@ -99,7 +86,13 @@ public class ParserNBA implements IParser {
         }
     }
 
+    public void storeGoat(String name, String position, int age, Stats playerStats){
 
+        final BasketBallPlayerNBA nbaPlayer = new BasketBallPlayerNBA(name, position, age, playerStats);
+        if(!dataRows.contains(nbaPlayer)){
+            dataRows.add(nbaPlayer);
+        }
+    }
 
     public Map<String,List<Double>> getDataCols(){
         return this.dataCols;
@@ -108,6 +101,11 @@ public class ParserNBA implements IParser {
     public List<BasketBallPlayerNBA> getDataRows(){
         return this.dataRows;
     }
+
+    public Map<String,Opinion> getGoatOpinions(){
+        return this.goatFields;
+    }
+
 
 
 
@@ -125,23 +123,15 @@ public class ParserNBA implements IParser {
         opinion.put("PF", Opinion.LOW_NEGATIVE);
         opinion.put("PTS", Opinion.STRONG_POSITIVE);
 
-
-
-
-
         String fileName = "C:\\Users\\jason\\IdeaProjects\\projectA\\Data\\nba2021test1.txt";
         IParser nbaData = new ParserNBA(fileName, opinion);
 
         for(int i =0; i < 2; i++) {
             System.out.println((nbaData.getDataRows().get(i)));
-
-
         }
 
         for(String x: nbaData.getDataCols().keySet()) {
-
-
-            System.out.println(x +" " + (nbaData.getDataCols().get(x)));
+            System.out.println(x +" "+ (nbaData.getDataCols().get(x)));
         }
     }
 

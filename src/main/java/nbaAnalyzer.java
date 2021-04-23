@@ -1,11 +1,10 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.function.Predicate;
+
 
 public class nbaAnalyzer extends GoatAnalyzer {
 
     nbaAnalyzer(IParser fileData) {
         super(fileData);
+        super.SkewTest();
         this.goatCalculator();
         super.goatRanker();
         super.convertResults();
@@ -25,21 +24,25 @@ public class nbaAnalyzer extends GoatAnalyzer {
 
                     double statValue = player.getGoatStats().getStatHolder().get(statName);
                     sum = sum + (normalize(statValue, dataMeans.get(statName), dataStandardDeviations.get(statName))
-                            * player.getGoatStats().getWeightingHolder().get(statName).getRating());
+                            * super.dataSet.getGoatOpinions().get(statName).getRating());
                 }
+                sum *= periodMultiplier(player);
                 player.getGoatStats().setGOATScore(sum);
             }
         }
 
     }
 
-    public void filter(String position){
 
-        Predicate<BasketBallPlayerNBA> positionFilter = player -> player.getPosition().equals(position);
 
-        //rankedData.stream().filter(positionFilter);
+    /*public void filter(String filterType){
 
-    }
+        Predicate<BasketBallPlayerNBA> positionFilter = player -> player.position().equals(filterType);
+
+
+        rankedData.stream().filter(positionFilter).forEach((p)-> System.out.println(p));
+
+    }*/
 
 
 

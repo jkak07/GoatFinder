@@ -41,6 +41,8 @@ public class GoatRunner {
 
         runTheGoat(nbaAnalysed, 20);
 
+        //nbaAnalysed.filter("C");
+
 
 
     }
