@@ -1,12 +1,7 @@
 
-import java.util.Map;
-import java.util.Objects;
-
 final public class BasketBallPlayerNBA extends SportsGoat {
 
     private final String position;
-    private final Stats playerStats;
-
 
     BasketBallPlayerNBA(String name, String position, int age, Stats sNBA){
         this.position = position;
@@ -15,23 +10,14 @@ final public class BasketBallPlayerNBA extends SportsGoat {
         this.playerStats = sNBA;
     }
 
-    public String getPosition() {
+    public String position() {
         return position;
     }
 
-    public String getName(){ return name;}
-
-    public Stats getGoatStats(){
-
-        return playerStats;
-    }
-
-    public String toString(){
-        return this.name + "'s Goatness is: " + this.playerStats.getGOATScore();
-    }
 
     public void goatCase(){
-        String ageNotion = "";
+        String ageNotion;
+
         if(this.age <30){
             ageNotion = "And I haven't even reached the twilight of my career.";
         } else{
@@ -44,24 +30,7 @@ final public class BasketBallPlayerNBA extends SportsGoat {
         System.out.println(proof + "\n\n" + "Goat Report");
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, age);
-    }
 
-    @Override
-    public boolean equals(Object op){
-
-        //check if class is the same first
-        if(this.getClass() != op.getClass())
-            return false;
-
-        //typecast before comparison
-        BasketBallPlayerNBA otherPlayer = (BasketBallPlayerNBA) op;
-
-        //age and name define player
-        return this.name.equals(otherPlayer.name) && this.age == otherPlayer.age;
-    }
 
 
 }

@@ -13,4 +13,19 @@ public enum Opinion {
 
     public int getRating(){return rating;}
 
+    public Opinion reflect(){
+        switch(this){
+            default: return NEUTRAL;
+            case LOW_POSITIVE: return LOW_NEGATIVE;
+            case MEDIUM_NEGATIVE: return MEDIUM_POSITIVE;
+            case STRONG_POSITIVE: return STRONG_NEGATIVE;
+            case LOW_NEGATIVE: return LOW_POSITIVE;
+            case MEDIUM_POSITIVE: return MEDIUM_NEGATIVE;
+            case STRONG_NEGATIVE: return STRONG_POSITIVE;
+
+
+        }
+
+    }
+
 }
