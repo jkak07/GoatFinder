@@ -1,4 +1,4 @@
-
+package com.goatfinder.builder ;
 final public class BasketBallPlayerNBA extends SportsGoat {
 
     private final String position;

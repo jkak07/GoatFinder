@@ -1,4 +1,4 @@
-
+package com.goatfinder.builder ;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.Map;
 
 public class ParserNBA implements IParser {
-
 
     final private String fileName;
     final private Map<String, List<Double>> dataCols;
@@ -40,20 +39,17 @@ public class ParserNBA implements IParser {
             reader = new BufferedReader(new FileReader(fileName));
             String[] colNames = reader.readLine().split(",");
             String line;
-            while ((line = reader.readLine()) != null) {
 
+            while ((line = reader.readLine()) != null) {
                 String[] playerInfo= line.split(",");
 
                 String name = "";
                 String position = "";
                 int age = 0;
-
                 Stats playerStats = new Stats();
 
                 for(int i = 0; i < playerInfo.length; i++){
-
                     String colName = colNames[i];
-
                     switch(colName){
                         case "Player":
                             name = parseName(playerInfo[i]);
@@ -69,13 +65,7 @@ public class ParserNBA implements IParser {
                             dataCols.computeIfAbsent(PERIOD, k -> new ArrayList<>()).add(playerStats.getPeriod());
                             break;
                     }
-
-                    if (goatFields.containsKey(colNames[i])) {
-                        double statValue = (!playerInfo[i].isEmpty()) ? Double.parseDouble(playerInfo[i]): 0;
-                        playerStats.getStatHolder().put(colNames[i], statValue);
-                        dataCols.computeIfAbsent(colNames[i], k -> new ArrayList<>()).add(statValue);
-
-                    }
+                    storeChosenFields(colNames[i],playerInfo[i],playerStats);
                 }
                 storeGoat(name, position, age, playerStats);
             }
@@ -94,6 +84,14 @@ public class ParserNBA implements IParser {
         }
     }
 
+    public void storeChosenFields(String header, String stat,Stats storage ){
+        if (goatFields.containsKey(header)) {
+            double statValue = (!stat.isEmpty()) ? Double.parseDouble(stat) : 0;
+            storage.getStatHolder().put(header, statValue);
+            dataCols.computeIfAbsent(header, k -> new ArrayList<>()).add(statValue);
+        }
+    }
+
     public Map<String,List<Double>> getDataCols(){
         return this.dataCols;
     }
@@ -109,7 +107,7 @@ public class ParserNBA implements IParser {
 
 
 
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         HashMap<String, Opinion> opinion = new HashMap<>();
 
         opinion.put("MP", Opinion.MEDIUM_POSITIVE);
@@ -133,7 +131,7 @@ public class ParserNBA implements IParser {
         for(String x: nbaData.getDataCols().keySet()) {
             System.out.println(x +" "+ (nbaData.getDataCols().get(x)));
         }
-    }
+    }*/
 
 
 }

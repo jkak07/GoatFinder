@@ -1,3 +1,4 @@
+package com.goatfinder.builder ;
 public enum Opinion {
     LOW_POSITIVE(3),
     MEDIUM_POSITIVE(5),

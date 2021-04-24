@@ -1,3 +1,4 @@
+package com.goatfinder.builder ;
 import java.util.Objects;
 
 public abstract class SportsGoat implements IGoat {

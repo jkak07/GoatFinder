@@ -1,8 +1,8 @@
-
+package com.goatfinder.builder ;
 
 public class nbaAnalyzer extends GoatAnalyzer {
 
-    nbaAnalyzer(IParser fileData) {
+    public nbaAnalyzer(IParser fileData) {
         super(fileData);
         super.SkewTest();
         this.goatCalculator();
