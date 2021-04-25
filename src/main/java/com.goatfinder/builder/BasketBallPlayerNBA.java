@@ -1,4 +1,7 @@
 package com.goatfinder.builder ;
+
+import org.junit.jupiter.api.function.Executable;
+
 final public class BasketBallPlayerNBA extends SportsGoat {
 
     private final String position;
@@ -29,8 +32,6 @@ final public class BasketBallPlayerNBA extends SportsGoat {
                 "I am clearly the goat of Basketball. \n" + ageNotion;
         System.out.println(proof + "\n\n" + "Goat Report");
     }
-
-
 
 
 }

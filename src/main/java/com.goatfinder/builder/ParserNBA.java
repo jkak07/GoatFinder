@@ -24,7 +24,7 @@ public class ParserNBA implements IParser {
     }
 
     /*remove unnecessary string in player names*/
-    private String parseName(String name){
+    public static String parseName(String name){
         String parsedName = null;
         if(name.contains("\\")){
             parsedName = name.substring(0,name.indexOf("\\"));}
@@ -76,7 +76,7 @@ public class ParserNBA implements IParser {
         }
     }
 
-    public void storeGoat(String name, String position, int age, Stats playerStats){
+    private void storeGoat(String name, String position, int age, Stats playerStats){
 
         final BasketBallPlayerNBA nbaPlayer = new BasketBallPlayerNBA(name, position, age, playerStats);
         if(!dataRows.contains(nbaPlayer)){
@@ -84,7 +84,7 @@ public class ParserNBA implements IParser {
         }
     }
 
-    public void storeChosenFields(String header, String stat,Stats storage ){
+    private void storeChosenFields(String header, String stat,Stats storage ){
         if (goatFields.containsKey(header)) {
             double statValue = (!stat.isEmpty()) ? Double.parseDouble(stat) : 0;
             storage.getStatHolder().put(header, statValue);
@@ -103,35 +103,6 @@ public class ParserNBA implements IParser {
     public Map<String,Opinion> getGoatOpinions(){
         return this.goatFields;
     }
-
-
-
-
-   /* public static void main(String[] args) {
-        HashMap<String, Opinion> opinion = new HashMap<>();
-
-        opinion.put("MP", Opinion.MEDIUM_POSITIVE);
-        opinion.put("3P%", Opinion.LOW_POSITIVE);
-        opinion.put("FTA", Opinion.LOW_POSITIVE);
-        opinion.put("TRB", Opinion.STRONG_POSITIVE);
-        opinion.put("AST", Opinion.STRONG_POSITIVE);
-        opinion.put("STL", Opinion.STRONG_POSITIVE);
-        opinion.put("BLK", Opinion.LOW_POSITIVE);
-        opinion.put("TOV", Opinion.MEDIUM_NEGATIVE);
-        opinion.put("PF", Opinion.LOW_NEGATIVE);
-        opinion.put("PTS", Opinion.STRONG_POSITIVE);
-
-        String fileName = "C:\\Users\\jason\\IdeaProjects\\projectA\\Data\\nba2021test1.txt";
-        IParser nbaData = new ParserNBA(fileName, opinion);
-
-        for(int i =0; i < 2; i++) {
-            System.out.println((nbaData.getDataRows().get(i)));
-        }
-
-        for(String x: nbaData.getDataCols().keySet()) {
-            System.out.println(x +" "+ (nbaData.getDataCols().get(x)));
-        }
-    }*/
 
 
 }

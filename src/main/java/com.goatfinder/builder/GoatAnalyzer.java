@@ -1,59 +1,88 @@
 
-package com.goatfinder.builder ;import java.util.*;
+package com.goatfinder.builder ;
 
 
+import java.util.*;
 
 public abstract class GoatAnalyzer  {
     protected static final int BASE_VALUE = 100;
-    protected static final float SKEW_LIMIT = 0.5f;
+    protected static final double SKEW_LIMIT = 0.5;
+
     protected final Map<String, Double> dataMeans;
     protected final Map<String, Double> dataStandardDeviations;
     protected final Map<String, Double> dataMedian;
     protected final Map<String, Double> dataSkew;
+    protected final Map<String, Double> dataMaximums;
     protected double periodRange;
     protected final IParser dataSet;
     protected List<IGoat> rankedData;
+    protected Map<String,Boolean> skewTestResults;
 
 
     public GoatAnalyzer(IParser fileData) {
         dataSet = fileData;
-        dataSet.read();
+
         dataMeans = new HashMap<>();
         dataMedian = new HashMap<>();
+        dataMaximums = new HashMap<>();
         dataStandardDeviations = new HashMap<>();
         dataSkew = new HashMap<>();
         periodRange = 0;
-
-        this.getDataMeasures();
+        skewTestResults = new HashMap<>();
 
     }
 
-    public void SkewTest(){
+    public void skewTest(){
 
         for (String statName : dataSet.getDataCols().keySet()){
-            List<Double> statValues = dataSet.getDataCols().get(statName); // will this change the member variable as it passes by value???
-            double skew = GoatMath.skew(dataSet.getDataCols().get(statName));
+            List<Double> statValues = dataSet.getDataCols().get(statName);
+            dataSkew.put(statName,GoatMath.skew(dataSet.getDataCols().get(statName)));
+            dataMaximums.put(statName,GoatMath.skew(dataSet.getDataCols().get(statName)));
 
-            if(skew < - SKEW_LIMIT){
-              GoatMath.reflectData(statValues);
-              Opinion weighting = dataSet.getGoatOpinions().get(statName);
-              dataSet.getGoatOpinions().put(statName, weighting.reflect());
-              GoatMath.logarithmize(statValues);
+            if (dataSkew.get(statName) < -1*SKEW_LIMIT  && !statName.equals(IParser.PERIOD)) {
+                GoatAnalyzer.reflectData(statValues);
+                Opinion weighting = dataSet.getGoatOpinions().get(statName);
+                dataSet.getGoatOpinions().put(statName, weighting.reflect());
+                GoatMath.transform(statValues);
+                skewTestResults.put(statName,true);
+
             }
-            if (skew > SKEW_LIMIT){
-                GoatMath.logarithmize(statValues);
+            else if (dataSkew.get(statName) > SKEW_LIMIT && !statName.equals(IParser.PERIOD)){
+                GoatMath.transform(statValues);
+                skewTestResults.put(statName,true);
+            }
+            else{
+                skewTestResults.put(statName,false);
+            }
+        }
+        skewDataUpdateRows();
+    }
+
+
+    public void skewDataUpdateRows(){
+
+        for (IGoat player : dataSet.getDataRows()){
+            for (String statName : player.getGoatStats().getStatHolder().keySet()){
+                if(dataSkew.get(statName) < -SKEW_LIMIT) {
+                    double value = player.getGoatStats().getStatHolder().get(statName);
+                    double reflectedValue = 2 + dataMaximums.get(statName) - value;
+                    player.getGoatStats().getStatHolder().put(statName,Math.sqrt(reflectedValue));
+                }
+                if(dataSkew.get(statName) > SKEW_LIMIT) {
+                    double value = player.getGoatStats().getStatHolder().get(statName);
+                    player.getGoatStats().getStatHolder().put(statName,Math.sqrt(value));
+                }
             }
         }
     }
 
 
-    private void getDataMeasures(){
+    public void getDataMeasures(){
         for (String statName : dataSet.getDataCols().keySet()){
             dataMeans.put(statName, GoatMath.mean(dataSet.getDataCols().get(statName)));
             dataStandardDeviations.put(statName, GoatMath.standardDeviation(dataSet.getDataCols().get(statName)));
             dataMedian.put(statName, GoatMath.median(dataSet.getDataCols().get(statName)));
-            dataSkew.put(statName, GoatMath.skew(dataSet.getDataCols().get(statName)));
-
+            dataSkew.put(statName,GoatMath.skew(dataSet.getDataCols().get(statName))); //take off afterwards
             if(statName.equals(IParser.PERIOD)){
                 periodRange = GoatMath.range(dataSet.getDataCols().get(statName));
             }
@@ -76,6 +105,7 @@ public abstract class GoatAnalyzer  {
     }
 
     public void print(int topXPlayers) {
+
         rankedData.get(0).goatCase();
         rankedData.stream()
                 .limit(topXPlayers)
@@ -103,6 +133,14 @@ public abstract class GoatAnalyzer  {
         } else {
             return 0.75;
         }
+    }
+
+    public static List<Double> reflectData(List<Double> list){
+        double pivot = Collections.max(list);
+        for(int i = 0;  i < list.size() ; i++){
+            list.set(i,  2 + pivot - list.get(i));
+        }
+        return list;
     }
 
 
@@ -148,16 +186,10 @@ public abstract class GoatAnalyzer  {
 
         }
 
-        private static void reflectData(List<Double> list){
-            double pivot = Collections.max(list);
-            for(int i = 0;  i < list.size() ; i++){
-                list.set(i, pivot - list.get(i));
-            }
-        }
 
-        private static void logarithmize(List<Double> list){
+        private static void transform(List<Double> list){
             for (int i = 0; i < list.size(); i++) {
-                list.set(i, Math.log(list.get(i)) + 1);
+                list.set(i, (Math.sqrt(list.get(i))));
             }
         }
 
@@ -175,6 +207,20 @@ public abstract class GoatAnalyzer  {
             }
         return max - min;
         }
+
+        private static double maximum(List<Double> list){
+            double max = list.get(0);
+
+            for (double val : list) {
+
+                if(val > max){
+                    max = val;
+                }
+            }
+            return max ;
+        }
+
+
 
     }
 
@@ -220,8 +266,31 @@ public abstract class GoatAnalyzer  {
         }*/
 
 
+    public Map<String, Double> getDataMeans() {
+        return dataMeans;
+    }
 
+    public Map<String, Double> getDataStandardDeviations() {
+        return dataStandardDeviations;
+    }
 
+    public Map<String, Double> getDataMedian() {
+        return dataMedian;
+    }
 
+    public Map<String, Double> getDataSkew() {
+        return dataSkew;
+    }
 
+    public double getPeriodRange() {
+        return periodRange;
+    }
+
+    public IParser getDataSet() {
+        return dataSet;
+    }
+
+    public Map<String, Boolean> getSkewTestResults() {
+        return skewTestResults;
+    }
 }

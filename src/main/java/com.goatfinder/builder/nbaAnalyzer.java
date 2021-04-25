@@ -4,10 +4,11 @@ public class nbaAnalyzer extends GoatAnalyzer {
 
     public nbaAnalyzer(IParser fileData) {
         super(fileData);
-        super.SkewTest();
+        this.skewTest();
+        this.getDataMeasures();
         this.goatCalculator();
-        super.goatRanker();
-        super.convertResults();
+        this.goatRanker();
+        this.convertResults();
     }
 
     public void goatCalculator() {
