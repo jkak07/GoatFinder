@@ -77,6 +77,7 @@ public class ParserNBA implements IParser {
     }
 
     private void storeGoat(String name, String position, int age, Stats playerStats){
+        //IGoat nbaPlayer = GoatFactory.createGoat(name, position, age, playerStats);
 
         final BasketBallPlayerNBA nbaPlayer = new BasketBallPlayerNBA(name, position, age, playerStats);
         if(!dataRows.contains(nbaPlayer)){

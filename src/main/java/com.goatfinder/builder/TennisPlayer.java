@@ -3,7 +3,7 @@ package com.goatfinder.builder;
 public class TennisPlayer extends SportsGoat {
 
 
-    TennisPlayer(String name, String position, int age, Stats sNBA){
+    TennisPlayer(String name, int age, Stats sNBA){
         this.age = age;
         this.name = name;
         this.playerStats = sNBA;

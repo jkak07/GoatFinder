@@ -39,7 +39,7 @@ public abstract class GoatAnalyzer  {
             dataSkew.put(statName,GoatMath.skew(dataSet.getDataCols().get(statName)));
             dataMaximums.put(statName,GoatMath.skew(dataSet.getDataCols().get(statName)));
 
-            if (dataSkew.get(statName) < -1*SKEW_LIMIT  && !statName.equals(IParser.PERIOD)) {
+            if (dataSkew.get(statName) < -SKEW_LIMIT  && !statName.equals(IParser.PERIOD)) {
                 GoatAnalyzer.reflectData(statValues);
                 Opinion weighting = dataSet.getGoatOpinions().get(statName);
                 dataSet.getGoatOpinions().put(statName, weighting.reflect());
@@ -126,8 +126,6 @@ public abstract class GoatAnalyzer  {
 
 
     public double periodMultiplier(IGoat goat) {
-        double x = goat.getGoatStats().getPeriod();
-
         if (goat.getGoatStats().getPeriod() > periodRange * 0.8) {
             return 1;
         } else {
@@ -224,46 +222,7 @@ public abstract class GoatAnalyzer  {
 
     }
 
-    /*public static void main(String args[]){
 
-        ArrayList<Double> list = new ArrayList<Double>();
-        list.add(18.0);
-        list.add(5.0);
-        list.add(8.0);
-        list.add(99.0);
-        list.add(4.0);
-        list.add(5.0);
-
-
-
-        double sum = 0;
-        double factor = 1/((list.size()-1)*(Math.pow(GoatMath.standardDeviation(list),3)));
-        for(double val: list){
-            sum += (val - GoatMath.mean(list))*(val - GoatMath.mean(list))*(val - GoatMath.mean(list));
-        }
-        System.out.println(sum*factor);
-
-        HashMap<String, Opinion> opinion = new HashMap<>();
-
-        opinion.put("MP", Opinion.MEDIUM_POSITIVE);
-        opinion.put("3P%", Opinion.LOW_POSITIVE);
-        opinion.put("FTA", Opinion.LOW_POSITIVE);
-        opinion.put("TRB", Opinion.STRONG_POSITIVE);
-        opinion.put("AST", Opinion.STRONG_POSITIVE);
-        opinion.put("STL", Opinion.STRONG_POSITIVE);
-        opinion.put("BLK", Opinion.LOW_POSITIVE);
-        opinion.put("TOV", Opinion.MEDIUM_NEGATIVE);
-        opinion.put("PF", Opinion.LOW_NEGATIVE);
-        opinion.put("PTS", Opinion.STRONG_POSITIVE);
-
-        String fileName = "C:\\Users\\jason\\IdeaProjects\\projectA\\Data\\nba2021test1.txt";
-        IParser nbaData = new ParserNBA(fileName, opinion);
-
-        GoatAnalyzer nbaAnalysed = new nbaAnalyzer(nbaData);
-
-        nbaAnalysed.dataSkew();
-
-        }*/
 
 
     public Map<String, Double> getDataMeans() {

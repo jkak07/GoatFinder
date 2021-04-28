@@ -1,6 +1,6 @@
 package com.goatfinder.builder ;
 
-import org.junit.jupiter.api.function.Executable;
+
 
 final public class BasketBallPlayerNBA extends SportsGoat {
 
@@ -16,6 +16,7 @@ final public class BasketBallPlayerNBA extends SportsGoat {
     public String position() {
         return position;
     }
+
 
 
     public void goatCase(){

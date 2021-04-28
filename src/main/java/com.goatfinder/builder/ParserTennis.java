@@ -11,30 +11,23 @@ import java.util.stream.Stream;
 public class ParserTennis {
 
 
+    public void read() {
 
+        try (BufferedReader reader = Files.newBufferedReader(Paths.get("C:\\Users\\jason\\IdeaProjects\\projectA\\Data\\TennisAllTime.csv"));
+             Stream<String> line = reader.lines()) {
 
+            List<String[]> allLines = line.map(lines -> lines.split(",")).collect(Collectors.toList());
 
-    /*public void read(){
-
-        try(BufferedReader reader = Files.newBufferedReader(Paths.get("C:\\Users\\jason\\IdeaProjects\\projectA\\Data\\TennisAllTime.csv"));
-            Stream<String> line = reader.lines()){
-
-            List<String[]> allLines = line.map(lines-> lines.split(",")).collect(Collectors.toList());
-
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public int getHeader(String colName, List<String[]> list) {
-        for(int i = 0; i < list.get(0).length; i++ ){
+        for (int i = 0; i < list.get(0).length; i++) {
 
-        }*/
+        }
+        return 0;
 
-
-
-
-
-
+    }
 }
