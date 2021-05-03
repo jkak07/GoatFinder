@@ -12,9 +12,9 @@ public enum Opinion {
 
     Opinion(int rating){this.rating = rating;}
 
-    public int getRating(){return rating;}
+    int getRating(){return rating;}
 
-    public Opinion reflect(){
+    Opinion reflect(){
         switch(this){
             default: return NEUTRAL;
             case LOW_POSITIVE: return LOW_NEGATIVE;

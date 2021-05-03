@@ -1,7 +1,6 @@
-import com.goatfinder.builder.IParser;
-import com.goatfinder.builder.Opinion;
-import com.goatfinder.builder.ParserNBA;
+package com.goatfinder.builder;
 import org.junit.jupiter.api.*;
+import org.mockito.MockitoAnnotations;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,8 +11,7 @@ public class ParseNBATests {
 
    private String fileName;
    private Map<String, Opinion> opinion;
-   private ParserNBA parser;
-
+   private BasketballParser parser;
 
 
     @BeforeEach
@@ -33,15 +31,17 @@ public class ParseNBATests {
         opinion.put("PTS", Opinion.STRONG_POSITIVE);
 
         fileName = "C:\\Users\\jason\\IdeaProjects\\projectA\\Data\\nba2021test.txt";
-        parser = new ParserNBA(fileName, opinion);
+        parser = new BasketballParser(fileName, opinion);
 
+        MockitoAnnotations.initMocks(this);
 
     }
+
     @Test
     @DisplayName("Parse names correctly")
     public void testParseName(){
-        Assertions.assertAll(()->Assertions.assertEquals("",ParserNBA.parseName("\\test1")),
-                ()-> Assertions.assertEquals("jason" ,ParserNBA.parseName("jason\\jjj")));
+        Assertions.assertAll(()->Assertions.assertEquals("",BasketballParser.parseName("\\test1")),
+                ()-> Assertions.assertEquals("jason" ,BasketballParser.parseName("jason\\jjj")));
     }
 
     @DisplayName("read Data Correctly")
@@ -52,8 +52,8 @@ public class ParseNBATests {
         list.add(25.8);list.add(29.0); list.add(29.7);list.add(22.5);
 
         Assertions.assertAll(()->Assertions.assertEquals("LeBron James's Goatness is: 0.0",parser.getDataRows().get(0).toString()),
-                ()-> Assertions.assertEquals("LeBron James",parser.getDataRows().get(0).getName()),
-                ()-> Assertions.assertEquals("PG", parser.getDataRows().get(0).position()),
+                //()-> Assertions.assertEquals("LeBron James",parser.getDataRows().get(0).getName()),
+                //()-> Assertions.assertEquals("PG", parser.getDataRows().get(0).position()),
                 ()-> Assertions.assertEquals(36.0,parser.getDataRows().get(0).getGoatStats().getPeriod()),
                 ()-> Assertions.assertEquals(34.6,parser.getDataRows().get(0).getGoatStats().getStatHolder().get("MP")),
                 ()-> Assertions.assertNull(parser.getDataRows().get(0).getGoatStats().getStatHolder().get("hello") ),

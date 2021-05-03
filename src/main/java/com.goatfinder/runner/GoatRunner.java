@@ -4,19 +4,13 @@ The methodology depends on input data and a series of stats which normalises it*
 package com.goatfinder.runner ;
 
 import com.goatfinder.builder.*;
-
 import java.util.HashMap;
 import java.util.Map;
 
 
 public class GoatRunner {
 
-    public static void runTheGoat(GoatAnalyzer goatsAnalysed, int size) {
-
-        goatsAnalysed.print(size);
-
-    }
-    public static Map<String, Opinion> setOpinions(){
+    public static Map<String, Opinion> setOpinionsBasketball(){
         Map<String, Opinion> opinion = new HashMap<>();
 
         opinion.put("3P%", Opinion.LOW_POSITIVE);
@@ -29,17 +23,6 @@ public class GoatRunner {
         opinion.put("PF", Opinion.LOW_NEGATIVE);
         opinion.put("PTS", Opinion.STRONG_POSITIVE);
 
-        /*opinion.put("grandSlams", Opinion.MEDIUM_POSITIVE);
-        opinion.put("tourFinals", Opinion.LOW_POSITIVE);
-        opinion.put("altFinals", Opinion.LOW_POSITIVE);
-        opinion.put("masters", Opinion.STRONG_POSITIVE);
-        opinion.put("olympics", Opinion.STRONG_POSITIVE);
-        opinion.put("bigTitles", Opinion.STRONG_POSITIVE);
-        opinion.put("titles", Opinion.LOW_POSITIVE);
-        opinion.put("weeksAtNo1", Opinion.MEDIUM_NEGATIVE);
-        opinion.put("wonLost", Opinion.LOW_NEGATIVE);
-        opinion.put("PTS", Opinion.STRONG_POSITIVE);*/
-
         return opinion;
 }
 
@@ -48,15 +31,11 @@ public class GoatRunner {
 
         String fileName = "C:\\Users\\jason\\IdeaProjects\\projectA\\Data\\nba2020.txt";
         //String fileName = "C:\\Users\\jason\\IdeaProjects\\projectA\\Data\\TennisAllTime.csv";
-        IParser nbaData = new ParserNBA(fileName, setOpinions());
 
-        GoatAnalyzer nbaAnalysed = new nbaAnalyzer(nbaData);
-
-        runTheGoat(nbaAnalysed, 20);
-
-        //nbaAnalysed.filter("C");
-
-
+        IParser nbaData = GoatMaker.parseBasketBallData(fileName, setOpinionsBasketball());
+        GoatAnalyzer analysed = GoatMaker.BasketBallAnalyzer(nbaData);
+        IGoatDisplayer nbaResults = GoatMaker.goatResults(analysed);
+        nbaResults.displayGoats(20);
 
     }
 

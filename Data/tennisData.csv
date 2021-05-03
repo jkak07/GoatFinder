@@ -1,0 +1,655 @@
+rank,name,country_name,active,dob,grandSlams,tourFinals,altFinals,masters,olympics,titles,weeksAtNo1,wonLost,wonPct
+1,Roger Federer,Switzerland,true,1981-08-08,20,6,0,28,0,103,310,1237-272,82.0%
+2,Novak Djokovic,Serbia,true,1987-05-22,18,5,0,36,0,82,318,946-193,83.1%
+3,Rafael Nadal,Spain,true,1986-06-03,20,0,0,35,1,87,209,1013-205,83.2%
+4,Jimmy Connors,United States,false,1952-09-02,8,1,2,20,0,109,268,1275-285,81.7%
+5,Ivan Lendl,United States,false,1960-03-07,8,5,2,18,0,94,270,1069-242,81.5%
+6,Pete Sampras,United States,false,1971-08-12,14,5,2,11,0,64,286,762-222,77.4%
+7,John McEnroe,United States,false,1959-02-16,7,3,5,17,0,77,170,881-198,81.6%
+8,Bjorn Borg,Sweden,false,1956-06-06,11,2,1,11,0,66,109,650-138,82.5%
+9,Andre Agassi,United States,false,1970-04-29,8,1,0,17,1,60,101,870-274,76.0%
+10,Rod Laver,Australia,false,1938-08-09,5,0,2,18,0,72,219,571-145,79.7%
+11,Boris Becker,Germany,false,1967-11-22,6,3,2,12,0,49,12,713-214,76.9%
+12,Stefan Edberg,Sweden,false,1966-01-19,6,1,0,6,1,42,72,804-271,74.8%
+13,Andy Murray,United Kingdom,true,1987-05-15,3,1,0,14,2,46,41,677-202,77.0%
+14,Mats Wilander,Sweden,false,1964-08-22,7,0,0,8,0,33,20,569-223,71.8%
+15,Guillermo Vilas,Argentina,false,1952-08-17,4,1,0,3,0,62,0,943-291,76.4%
+16,Ilie Nastase,Romania,false,1946-07-19,2,4,0,6,0,65,88,891-333,72.8%
+17,Ken Rosewall,Australia,false,1934-11-02,4,0,2,7,0,40,26,540-193,73.7%
+18,John Newcombe,Australia,false,1944-05-23,5,0,1,6,0,41,8,564-224,71.6%
+18,Arthur Ashe,United States,false,1943-07-10,3,0,1,4,0,45,0,783-258,75.2%
+20,Lleyton Hewitt,Australia,false,1981-02-24,2,2,0,2,0,30,80,616-262,70.2%
+21,Andy Roddick,United States,false,1982-08-30,1,0,0,5,0,32,13,610-213,74.1%
+22,Jim Courier,United States,false,1970-08-17,4,0,0,5,0,23,58,506-237,68.1%
+23,Michael Chang,United States,false,1972-02-22,1,0,0,7,0,34,0,662-312,68.0%
+24,Stan Smith,United States,false,1946-12-14,2,1,1,3,0,49,0,776-307,71.7%
+25,Yevgeny Kafelnikov,Russian Federation,false,1974-02-18,2,0,0,0,1,26,6,609-306,66.6%
+26,Gustavo Kuerten,Brazil,false,1976-09-10,3,1,0,5,0,20,43,358-195,64.7%
+27,Goran Ivanisevic,Croatia,false,1971-09-13,1,0,1,2,0,22,0,599-333,64.3%
+27,David Ferrer,Spain,false,1982-04-02,0,0,0,1,0,27,0,734-377,66.1%
+29,Thomas Muster,Austria,false,1967-10-02,1,0,0,8,0,44,6,626-274,69.6%
+29,Tom Okker,Netherlands,false,1944-02-22,0,0,0,4,0,34,0,643-274,70.1%
+31,Vitas Gerulaitis,United States,false,1954-07-26,1,0,1,4,0,26,0,534-233,69.6%
+32,Juan Martin Del Potro,Argentina,true,1988-09-23,1,0,0,1,0,22,0,439-173,71.7%
+33,Manuel Orantes,Spain,false,1949-02-06,1,1,0,1,0,35,0,713-282,71.7%
+34,Stan Wawrinka,Switzerland,true,1985-03-28,3,0,0,1,0,16,0,533-309,63.3%
+34,Michael Stich,Germany,false,1968-10-18,1,1,1,2,0,18,0,385-176,68.6%
+36,Marat Safin,Russian Federation,false,1980-01-27,2,0,0,5,0,15,9,422-267,61.2%
+37,Juan Carlos Ferrero,Spain,false,1980-02-12,1,0,0,4,0,16,8,479-262,64.6%
+38,Tony Roche,Australia,false,1945-05-17,0,0,0,3,0,21,0,361-182,66.5%
+39,Carlos Moya,Spain,false,1976-08-27,1,0,0,3,0,20,2,575-319,64.3%
+40,Patrick Rafter,Australia,false,1972-12-28,2,0,0,2,0,11,1,358-191,65.2%
+41,Yannick Noah,France,false,1960-05-18,1,0,0,4,0,23,0,481-212,69.4%
+42,Tomas Berdych,Czech Republic,false,1985-09-17,0,0,0,1,0,13,0,640-341,65.2%
+43,Roscoe Tanner,United States,false,1951-10-15,1,0,0,3,0,16,0,596-297,66.7%
+44,Dominic Thiem,Austria,true,1993-09-03,1,0,0,1,0,17,0,301-160,65.3%
+44,Brian Gottfried,United States,false,1952-01-27,0,0,0,3,0,25,0,698-330,67.9%
+46,Marcelo Rios,Chile,false,1975-12-26,0,0,1,5,0,18,6,392-192,67.1%
+47,Nikolay Davydenko,Russian Federation,false,1981-06-02,0,1,0,3,0,21,0,482-329,59.4%
+48,Richard Krajicek,Netherlands,false,1971-12-06,1,0,0,2,0,17,0,411-219,65.2%
+49,Harold Solomon,United States,false,1952-09-17,0,0,0,3,0,22,0,585-334,63.7%
+50,Sergi Bruguera,Spain,false,1971-01-16,2,0,0,2,0,14,0,447-271,62.3%
+50,Jo Wilfried Tsonga,France,true,1985-04-17,0,0,0,2,0,18,0,465-227,67.2%
+52,Alexander Zverev,Germany,true,1997-04-20,0,1,0,3,0,14,0,256-130,66.3%
+52,Kei Nishikori,Japan,true,1989-12-29,0,0,0,0,0,12,0,413-202,67.2%
+54,Marin Cilic,Croatia,true,1988-09-28,1,0,0,1,0,18,0,520-289,64.3%
+54,Eddie Dibbs,United States,false,1951-02-23,0,0,0,1,0,22,0,599-262,69.6%
+56,Jan Kodes,Czech Republic,false,1946-03-01,3,0,0,0,0,9,0,490-281,63.6%
+56,David Nalbandian,Argentina,false,1982-01-01,0,1,0,2,0,11,0,383-192,66.6%
+56,Raul Ramirez,Mexico,false,1953-06-20,0,0,0,2,0,20,0,545-269,67.0%
+59,Alex Corretja,Spain,false,1974-04-11,0,1,0,2,0,17,0,438-281,60.9%
+60,Johan Kriek,United States,false,1958-04-05,2,0,0,2,0,14,0,376-222,62.9%
+61,Tommy Haas,Germany,false,1978-04-03,0,0,0,1,0,15,0,569-338,62.7%
+62,Thomas Enqvist,Sweden,false,1974-03-13,0,0,0,3,0,19,0,448-297,60.1%
+63,Andres Gomez,Ecuador,false,1960-02-27,1,0,0,2,0,21,0,530-274,65.9%
+63,Petr Korda,Czech Republic,false,1968-01-23,1,0,1,1,0,10,0,410-248,62.3%
+63,Miloslav Mecir,Slovakia,false,1964-05-19,0,0,1,2,1,11,0,260-122,68.1%
+63,Milos Raonic,Canada,true,1990-12-27,0,0,0,0,0,8,0,372-172,68.4%
+67,Tim Henman,United Kingdom,false,1974-09-06,0,0,0,1,0,11,0,496-274,64.4%
+67,Cliff Richey,United States,false,1946-12-31,0,0,0,0,0,22,0,468-219,68.1%
+69,Daniil Medvedev,Russian Federation,true,1996-02-11,0,1,0,3,0,10,0,173-86,66.8%
+69,Guillermo Coria,Argentina,false,1982-01-13,0,0,0,2,0,9,0,218-114,65.7%
+71,Jose Luis Clerc,Argentina,false,1958-08-16,0,0,0,3,0,25,0,381-152,71.5%
+72,Gene Mayer,United States,false,1956-04-11,0,0,0,2,0,14,0,318-158,66.8%
+72,Brad Gilbert,United States,false,1961-08-09,0,0,0,1,0,20,0,519-288,64.3%
+74,Todd Martin,United States,false,1970-07-08,0,0,0,0,0,8,0,411-234,63.7%
+75,John Isner,United States,true,1985-04-26,0,0,0,1,0,15,0,436-272,61.6%
+76,Andres Gimeno,Spain,false,1937-08-03,1,0,0,1,0,11,0,245-130,65.3%
+77,Marty Riessen,United States,false,1941-12-04,0,0,0,2,0,13,0,494-306,61.8%
+77,Tim Mayotte,United States,false,1960-08-03,0,0,0,2,0,12,0,340-203,62.6%
+79,Albert Costa,Spain,false,1975-06-25,1,0,0,1,0,12,0,385-273,58.5%
+79,Andrei Medvedev,Ukraine,false,1974-08-31,0,0,0,4,0,11,0,321-213,60.1%
+79,Wayne Ferreira,South Africa,false,1971-09-15,0,0,0,2,0,15,0,512-330,60.8%
+79,Greg Rusedski,United Kingdom,false,1973-09-06,0,0,1,1,0,15,0,436-287,60.3%
+79,Robin Soderling,Sweden,false,1984-08-14,0,0,0,1,0,10,0,310-170,64.6%
+79,Fernando Gonzalez,Chile,false,1980-07-29,0,0,0,0,0,11,0,370-202,64.7%
+85,Gael Monfils,France,true,1986-09-01,0,0,0,0,0,10,0,493-280,63.8%
+86,Jose Higueras,Spain,false,1953-03-01,0,0,0,1,0,16,0,455-243,65.2%
+87,Grigor Dimitrov,Bulgaria,true,1991-05-16,0,1,0,1,0,8,0,331-217,60.4%
+87,Ivan Ljubicic,Croatia,false,1979-03-19,0,0,0,1,0,10,0,429-296,59.2%
+89,Adriano Panatta,Italy,false,1950-07-09,1,0,0,1,0,11,0,408-248,62.2%
+89,Pat Cash,Australia,false,1965-05-27,1,0,0,0,0,6,0,237-149,61.4%
+91,Richard Gasquet,France,true,1986-06-18,0,0,0,0,0,15,0,550-333,62.3%
+92,Stefanos Tsitsipas,Greece,true,1998-08-12,0,1,0,1,0,6,0,153-82,65.1%
+93,Guy Forget,France,false,1965-01-04,0,0,0,2,0,11,0,380-291,56.6%
+93,Mark Philippoussis,Australia,false,1976-11-07,0,0,0,1,0,11,0,313-204,60.5%
+93,Henri Leconte,France,false,1963-07-04,0,0,0,0,0,9,0,377-269,58.4%
+96,John Alexander,Australia,false,1951-07-04,0,0,0,2,0,8,0,570-426,57.2%
+96,Cedric Pioline,France,false,1969-06-15,0,0,0,1,0,5,0,389-318,55.0%
+96,Sebastien Grosjean,France,false,1978-05-29,0,0,0,1,0,4,0,341-247,58.0%
+96,Wojtek Fibak,Poland,false,1952-08-03,0,0,0,0,0,15,0,540-314,63.2%
+100,Eliot Teltscher,United States,false,1959-03-15,0,0,0,1,0,10,0,400-216,64.9%
+100,Anders Jarryd,Sweden,false,1961-07-13,0,0,1,0,0,8,0,396-260,60.4%
+102,Magnus Norman,Sweden,false,1976-05-30,0,0,0,1,0,12,0,244-177,58.0%
+103,Joakim Nystrom,Sweden,false,1963-02-20,0,0,0,2,0,13,0,265-142,65.1%
+103,Emilio Sanchez,Spain,false,1965-05-29,0,0,0,1,0,15,0,432-290,59.8%
+103,Tommy Robredo,Spain,true,1982-05-01,0,0,0,1,0,12,0,533-357,59.9%
+103,Marc Rosset,Switzerland,false,1970-11-07,0,0,0,0,1,15,0,433-350,55.3%
+107,Cliff Drysdale,South Africa,false,1941-05-26,0,0,0,1,0,8,0,398-246,61.8%
+107,Jonas Bjorkman,Sweden,false,1972-03-23,0,0,0,0,0,6,0,414-362,53.4%
+109,James Blake,United States,false,1979-12-28,0,0,0,0,0,10,0,364-256,58.7%
+110,Gaston Gaudio,Argentina,false,1978-12-09,1,0,0,0,0,8,0,271-196,58.0%
+110,Andrei Chesnokov,Russian Federation,false,1966-02-02,0,0,0,3,0,7,0,346-259,57.2%
+110,Dick Stockton,United States,false,1951-02-18,0,0,0,1,0,9,0,388-261,59.8%
+110,Gilles Simon,France,true,1984-12-27,0,0,0,0,0,14,0,494-374,56.9%
+114,Tom Gorman,United States,false,1946-12-19,0,0,0,1,0,9,0,401-287,58.3%
+114,Alex Metreveli,Russian Federation,false,1944-11-02,0,0,0,0,0,12,0,276-101,73.2%
+116,Mikhail Youzhny,Russian Federation,false,1982-06-25,0,0,0,0,0,10,0,498-416,54.5%
+116,Aaron Krickstein,United States,false,1967-08-02,0,0,0,0,0,9,0,395-256,60.7%
+118,Richard Pancho Gonzales,United States,false,1928-05-09,0,0,0,2,0,9,0,151-89,62.9%
+118,Alberto Berasategui,Spain,false,1973-06-28,0,0,0,0,0,14,0,278-199,58.3%
+118,Magnus Gustafsson,Sweden,false,1967-01-03,0,0,0,0,0,14,0,415-260,61.5%
+118,Kevin Anderson,South Africa,true,1986-05-18,0,0,0,0,0,6,0,341-237,59.0%
+118,Nicolas Kiefer,Germany,false,1977-07-05,0,0,0,0,0,6,0,364-273,57.1%
+118,David Goffin,Belgium,true,1990-12-07,0,0,0,0,0,5,0,290-191,60.3%
+124,Thomas Johansson,Sweden,false,1975-03-24,1,0,0,1,0,9,0,357-296,54.7%
+124,Mark Cox,United Kingdom,false,1943-07-05,0,0,0,1,0,14,0,397-274,59.2%
+124,Kevin Curren,United States,false,1958-03-02,0,0,0,0,0,5,0,339-234,59.2%
+127,Mark Edmondson,Australia,false,1954-06-24,1,0,0,0,0,6,0,259-244,51.5%
+127,Felix Mantilla,Spain,false,1974-09-23,0,0,0,1,0,10,0,313-218,58.9%
+127,Vijay Amritraj,India,false,1953-12-14,0,0,0,0,0,16,0,411-315,56.6%
+127,Victor Pecci,Paraguay,false,1955-10-15,0,0,0,0,0,10,0,368-251,59.5%
+127,Tomas Smid,Czech Republic,false,1956-05-20,0,0,0,0,0,9,0,522-335,60.9%
+127,Magnus Larsson,Sweden,false,1970-03-25,0,0,1,0,0,7,0,310-221,58.4%
+133,Brian Teacher,United States,false,1954-12-23,1,0,0,0,0,8,0,335-235,58.8%
+133,Guillermo Canas,Argentina,false,1977-11-25,0,0,0,1,0,7,0,252-195,56.4%
+133,Nicolas Almagro,Spain,false,1985-08-21,0,0,0,0,0,13,0,397-278,58.8%
+133,Zeljko Franulovic,Croatia,false,1947-06-13,0,0,0,0,0,13,0,412-309,57.1%
+133,Clark Graebner,United States,false,1943-11-04,0,0,0,0,0,11,0,310-154,66.8%
+133,Feliciano Lopez,Spain,true,1981-09-20,0,0,0,0,0,7,0,496-462,51.8%
+133,Fernando Verdasco,Spain,true,1983-11-15,0,0,0,0,0,7,0,552-424,56.6%
+133,Mardy Fish,United States,false,1981-12-09,0,0,0,0,0,6,0,302-219,58.0%
+141,Sandy Mayer,United States,false,1952-04-05,0,0,0,0,0,12,0,370-199,65.0%
+141,Robert Lutz,United States,false,1947-08-29,0,0,0,0,0,11,0,450-296,60.3%
+141,Andrey Rublev,Russian Federation,true,1997-10-20,0,0,0,0,0,8,0,152-91,62.6%
+141,Ivo Karlovic,Croatia,true,1979-02-28,0,0,0,0,0,8,0,370-343,51.9%
+145,Roger Taylor,United Kingdom,false,1941-10-14,0,0,0,0,0,9,0,369-294,55.7%
+145,Roy Emerson,Australia,false,1936-11-03,0,0,0,0,0,6,0,269-165,62.0%
+147,Karel Novacek,Czech Republic,false,1965-03-30,0,0,0,1,0,13,0,299-246,54.9%
+147,Martin Jaite,Argentina,false,1964-10-09,0,0,0,0,0,12,0,301-179,62.7%
+147,Roberto Bautista Agut,Spain,true,1988-04-14,0,0,0,0,0,9,0,322-190,62.9%
+147,Jiri Novak,Czech Republic,false,1975-03-22,0,0,0,0,0,7,0,337-260,56.4%
+147,Dennis Ralston,United States,false,1942-07-27,0,0,0,0,0,6,0,152-128,54.3%
+147,Earl Butch Buchholz,United States,false,1940-09-16,0,0,0,0,0,6,0,95-78,54.9%
+147,Radek Stepanek,Czech Republic,false,1978-11-27,0,0,0,0,0,5,0,384-302,56.0%
+154,Matteo Berrettini,Italy,true,1996-04-12,0,0,0,0,0,4,0,83-54,60.6%
+154,Rainer Schuettler,Germany,false,1976-04-25,0,0,0,0,0,4,0,327-337,49.2%
+156,Fabio Fognini,Italy,true,1987-05-24,0,0,0,1,0,9,0,373-323,53.6%
+156,Jaime Fillol,Chile,false,1946-06-03,0,0,0,0,0,8,0,523-362,59.1%
+156,Dominik Hrbaty,Slovakia,false,1978-01-04,0,0,0,0,0,6,0,359-318,53.0%
+156,Peter Mcnamara,Australia,false,1955-07-05,0,0,0,0,0,5,0,204-136,60.0%
+160,Sam Querrey,United States,true,1987-10-07,0,0,0,0,0,10,0,374-306,55.0%
+160,Guillermo Perez Roldan,Argentina,false,1969-10-20,0,0,0,0,0,9,0,241-137,63.8%
+160,Sjeng Schalken,Netherlands,false,1976-09-08,0,0,0,0,0,9,0,292-267,52.2%
+160,Karol Kucera,Slovakia,false,1974-03-04,0,0,0,0,0,6,0,293-244,54.6%
+160,Nikola Pilic,Croatia,false,1939-08-27,0,0,0,0,0,6,0,302-249,54.8%
+160,Malivai Washington,United States,false,1969-06-20,0,0,0,0,0,4,0,251-183,57.8%
+166,Alberto Mancini,Argentina,false,1969-05-20,0,0,0,2,0,3,0,148-125,54.2%
+166,Fred Stolle,Australia,false,1938-10-08,0,0,0,1,0,5,0,173-166,51.0%
+166,Mikael Pernfors,Sweden,false,1963-07-16,0,0,0,1,0,3,0,140-114,55.1%
+166,Nick Kyrgios,Australia,true,1995-04-27,0,0,0,0,0,6,0,164-94,63.6%
+166,Onny Parun,New Zealand,false,1947-04-15,0,0,0,0,0,6,0,377-344,52.3%
+166,Phil Dent,Australia,false,1950-02-14,0,0,0,0,0,3,0,397-345,53.5%
+172,Balazs Taroczy,Hungary,false,1954-05-09,0,0,0,0,0,13,0,429-239,64.2%
+172,Juan Monaco,Argentina,false,1984-03-29,0,0,0,0,0,9,0,341-271,55.7%
+172,Corrado Barazzutti,Italy,false,1953-02-19,0,0,0,0,0,5,0,333-231,59.0%
+172,Jimmy Arias,United States,false,1964-08-16,0,0,0,0,0,5,0,286-223,56.2%
+172,Jonas Svensson,Sweden,false,1966-10-21,0,0,0,0,0,5,0,258-204,55.8%
+172,Lucas Pouille,France,true,1994-02-23,0,0,0,0,0,5,0,134-112,54.5%
+172,Nicolas Lapentti,Ecuador,false,1976-08-13,0,0,0,0,0,5,0,322-298,51.9%
+172,Marcos Baghdatis,Cyprus,false,1985-06-17,0,0,0,0,0,4,0,349-273,56.1%
+172,David Wheaton,United States,false,1969-06-02,0,0,1,0,0,3,0,232-191,54.8%
+181,Bill Scanlon,United States,false,1956-11-13,0,0,0,0,0,6,0,300-259,53.7%
+181,Juan Ignacio Chela,Argentina,false,1979-08-30,0,0,0,0,0,6,0,326-277,54.1%
+181,Nicolas Massu,Chile,false,1979-10-10,0,0,0,0,1,6,0,257-238,51.9%
+181,Pablo Carreno Busta,Spain,true,1991-07-12,0,0,0,0,0,5,0,205-171,54.5%
+181,Ray Ruffels,Australia,false,1946-03-23,0,0,0,0,0,5,0,219-200,52.3%
+181,Diego Sebastian Schwartzman,Argentina,true,1992-08-16,0,0,0,0,0,4,0,180-149,54.7%
+187,Amos Mansdorf,Israel,false,1965-10-20,0,0,0,1,0,6,0,306-233,56.8%
+187,Ross Case,Australia,false,1951-11-01,0,0,0,1,0,4,0,276-275,50.1%
+187,Bob Hewitt,South Africa,false,1940-01-12,0,0,0,0,0,10,0,264-169,61.0%
+187,Kent Carlsson,Sweden,false,1968-01-03,0,0,0,0,0,9,0,160-54,74.8%
+187,Jakob Hlasek,Switzerland,false,1964-11-12,0,0,0,0,0,5,0,438-333,56.8%
+192,Jaime Yzaga,Peru,false,1967-10-23,0,0,0,0,0,8,0,266-224,54.3%
+192,Carlos Costa,Spain,false,1968-04-22,0,0,0,0,0,6,0,248-208,54.4%
+192,Henrik Sundstrom,Sweden,false,1964-02-29,0,0,0,0,0,5,0,154-108,58.8%
+192,Janko Tipsarevic,Serbia,false,1984-06-22,0,0,0,0,0,4,0,288-258,52.7%
+192,Nicolas Escude,France,false,1976-04-03,0,0,0,0,0,4,0,172-129,57.1%
+192,Tim Gullikson,United States,false,1951-09-08,0,0,0,0,0,4,0,272-223,54.9%
+192,Kim Warwick,Australia,false,1952-04-08,0,0,0,0,0,3,0,280-266,51.3%
+199,Juan Aguilera,Spain,false,1962-03-22,0,0,0,2,0,5,0,146-141,50.9%
+199,Andrei Pavel,Romania,false,1974-01-27,0,0,0,1,0,3,0,279-266,51.2%
+199,Ramesh Krishnan,India,false,1961-06-05,0,0,0,0,0,8,0,323-288,52.9%
+199,Fabrice Santoro,France,false,1972-12-09,0,0,0,0,0,6,0,470-444,51.4%
+199,Colin Dibley,Australia,false,1944-09-19,0,0,0,0,0,5,0,332-313,51.5%
+199,Jurgen Melzer,Austria,false,1981-05-22,0,0,0,0,0,5,0,350-334,51.2%
+199,Younes El Aynaoui,Morocco,false,1971-09-12,0,0,0,0,0,5,0,269-227,54.2%
+199,Arnaud Clement,France,false,1977-12-17,0,0,0,0,0,4,0,316-327,49.1%
+199,Mario Ancic,Croatia,false,1984-03-30,0,0,0,0,0,3,0,208-135,60.6%
+199,Dick Crealy,Australia,false,1944-09-18,0,0,0,0,0,2,0,321-313,50.6%
+199,Steve Denton,United States,false,1956-09-05,0,0,0,0,0,0,0,108-116,48.2%
+210,Bill Bowrey,Australia,false,1943-12-25,1,0,0,0,0,1,0,99-109,47.6%
+210,Jack Sock,United States,true,1992-09-24,0,0,0,1,0,4,0,165-132,55.6%
+210,Karen Khachanov,Russian Federation,true,1996-05-21,0,0,0,1,0,4,0,147-118,55.5%
+210,Francisco Clavet,Spain,false,1968-10-24,0,0,0,0,0,8,0,388-340,53.3%
+210,Ernests Gulbis,Latvia,true,1988-08-30,0,0,0,0,0,6,0,245-237,50.8%
+210,Horst Skoff,Austria,false,1968-08-22,0,0,0,0,0,4,0,228-203,52.9%
+210,Alexander Volkov,Russian Federation,false,1967-03-03,0,0,0,0,0,3,0,303-255,54.3%
+210,Jay Berger,United States,false,1966-11-26,0,0,0,0,0,3,0,141-80,63.8%
+210,Wally Masur,Australia,false,1963-05-13,0,0,0,0,0,3,0,328-286,53.4%
+210,Hank Pfister,United States,false,1953-10-09,0,0,0,0,0,2,0,261-213,55.1%
+220,Philipp Kohlschreiber,Germany,true,1983-10-16,0,0,0,0,0,8,0,470-376,55.6%
+220,Jordi Arrese,Spain,false,1964-08-29,0,0,0,0,0,6,0,224-210,51.6%
+220,Pablo Cuevas,Uruguay,true,1986-01-01,0,0,0,0,0,6,0,232-208,52.7%
+220,Tim Wilkison,United States,false,1959-11-23,0,0,0,0,0,6,0,294-297,49.7%
+220,Jeff Borowiak,United States,false,1949-09-25,0,0,0,0,0,5,0,282-298,48.6%
+220,Paradorn Srichaphan,Thailand,false,1979-06-14,0,0,0,0,0,5,0,248-193,56.2%
+220,Jason Stoltenberg,Australia,false,1970-04-04,0,0,0,0,0,4,0,303-267,53.2%
+220,Mark Woodforde,Australia,false,1965-09-23,0,0,0,0,0,4,0,319-312,50.6%
+220,Alexandr Dolgopolov,Ukraine,false,1988-11-07,0,0,0,0,0,3,0,219-201,52.1%
+220,Chris Lewis Nzl,New Zealand,false,1957-03-09,0,0,0,0,0,3,0,224-188,54.4%
+220,Scott Davis,United States,false,1962-08-27,0,0,0,0,0,3,0,206-198,51.0%
+220,Borna Coric,Croatia,true,1996-11-14,0,0,0,0,0,2,0,165-142,53.7%
+220,John Sadri,United States,false,1956-09-19,0,0,0,0,0,2,0,215-190,53.1%
+220,Max Mirnyi,Belarus,false,1977-07-06,0,0,0,0,0,1,0,244-242,50.2%
+234,Chris Woodruff,United States,false,1973-01-02,0,0,0,1,0,2,0,109-104,51.2%
+234,John Fitzgerald,Australia,false,1960-12-28,0,0,0,0,0,6,0,241-232,51.0%
+234,Martin Klizan,Slovakia,true,1989-07-11,0,0,0,0,0,6,0,147-153,49.0%
+234,Paolo Bertolucci,Italy,false,1951-08-03,0,0,0,0,0,6,0,205-148,58.1%
+234,Michael Llodra,France,false,1980-05-18,0,0,0,0,0,5,0,187-221,45.8%
+234,Thierry Tulasne,France,false,1963-07-12,0,0,0,0,0,5,0,229-221,50.9%
+234,Charlie Pasarell,United States,false,1944-02-12,0,0,0,0,0,4,0,284-269,51.4%
+234,Jan Siemerink,Netherlands,false,1970-04-14,0,0,0,0,0,4,0,273-271,50.2%
+234,Arnaud Boetsch,France,false,1969-04-01,0,0,0,0,0,3,0,231-203,53.2%
+234,Mal Anderson,Australia,false,1935-03-03,0,0,0,0,0,3,0,84-52,61.8%
+234,Mariano Puerta,Argentina,false,1978-09-19,0,0,0,0,0,3,0,128-118,52.0%
+234,Mariano Zabaleta,Argentina,false,1978-02-28,0,0,0,0,0,3,0,202-213,48.7%
+234,Peter Fleming,United States,false,1955-01-21,0,0,0,0,0,3,0,224-214,51.1%
+234,Slobodan Zivojinovic,Serbia,false,1963-07-23,0,0,0,0,0,2,0,155-141,52.4%
+234,Todd Woodbridge,Australia,false,1971-04-02,0,0,0,0,0,2,0,244-236,50.8%
+234,Denis Shapovalov,Canada,true,1999-04-15,0,0,0,0,0,1,0,111-90,55.2%
+234,Goran Prpic,Croatia,false,1964-05-04,0,0,0,0,0,1,0,126-121,51.0%
+234,John Lloyd,United Kingdom,false,1954-08-27,0,0,0,0,0,1,0,217-272,44.4%
+234,Patrick Proisy,France,false,1949-09-10,0,0,0,0,0,1,0,224-194,53.6%
+253,Dmitry Tursunov,Russian Federation,false,1982-12-12,0,0,0,0,0,7,0,231-218,51.4%
+253,Luiz Mattar,Brazil,false,1963-08-18,0,0,0,0,0,7,0,191-178,51.8%
+253,Albert Montanes,Spain,false,1980-11-26,0,0,0,0,0,6,0,255-287,47.0%
+253,Martin Mulligan,Australia,false,1940-10-18,0,0,0,0,0,6,0,109-64,63.0%
+253,Heinz Gunthardt,Switzerland,false,1959-02-08,0,0,0,0,0,5,0,248-207,54.5%
+253,Ion Tiriac,Romania,false,1939-05-09,0,0,0,0,0,5,0,227-198,53.4%
+253,Alex De Minaur,Australia,true,1999-02-17,0,0,0,0,0,4,0,85-64,57.0%
+253,Andrew Pattison,United States,false,1949-01-30,0,0,0,0,0,4,0,284-261,52.1%
+253,Hans Gildemeister,Chile,false,1956-02-09,0,0,0,0,0,4,0,212-144,59.6%
+253,Javier Sanchez,Spain,false,1968-02-01,0,0,0,0,0,4,0,326-334,49.4%
+253,Karl Meiler,Germany,false,1949-04-30,0,0,0,0,0,4,0,253-192,56.9%
+253,Nikoloz Basilashvili,Georgia,true,1992-02-23,0,0,0,0,0,4,0,105-121,46.5%
+253,Brian Fairlie,New Zealand,false,1948-06-13,0,0,0,0,0,3,0,231-228,50.3%
+253,Carl Uwe Steeb,Germany,false,1967-09-01,0,0,0,0,0,3,0,212-212,50.0%
+253,Jan Michael Gambill,United States,false,1977-06-03,0,0,0,0,0,3,0,201-196,50.6%
+253,Mel Purcell,United States,false,1959-07-18,0,0,0,0,0,3,0,191-164,53.8%
+253,Robby Ginepri,United States,false,1982-10-07,0,0,0,0,0,3,0,188-204,48.0%
+253,Agustin Calleri,Argentina,false,1976-09-14,0,0,0,0,0,2,0,209-187,52.8%
+253,Florian Mayer,Germany,false,1983-10-05,0,0,0,0,0,2,0,243-261,48.2%
+253,Hicham Arazi,Morocco,false,1973-10-19,0,0,0,0,0,1,0,221-226,49.4%
+273,Hubert Hurkacz,Poland,true,1997-02-11,0,0,0,1,0,3,0,62-57,52.1%
+273,Manuel Santana,Spain,false,1938-05-10,0,0,0,0,0,7,0,110-44,71.4%
+273,Christian Garin,Chile,true,1996-05-30,0,0,0,0,0,5,0,66-57,53.7%
+273,Marcelo Filippini,Uruguay,false,1967-08-04,0,0,0,0,0,5,0,248-252,49.6%
+273,Thomaz Koch,Brazil,false,1945-05-11,0,0,0,0,0,5,0,211-164,56.3%
+273,Bernard Tomic,Australia,true,1992-10-21,0,0,0,0,0,4,0,186-182,50.5%
+273,Butch Walts,United States,false,1955-06-04,0,0,0,0,0,4,0,142-136,51.1%
+273,Jacco Eltingh,Netherlands,false,1970-08-29,0,0,0,0,0,4,0,127-147,46.4%
+273,Marcel Granollers,Spain,true,1986-04-12,0,0,0,0,0,4,0,202-250,44.7%
+273,Pablo Andujar,Spain,true,1986-01-23,0,0,0,0,0,4,0,146-215,40.4%
+273,Paul Henri Mathieu,France,false,1982-01-12,0,0,0,0,0,4,0,276-306,47.4%
+273,Richard Fromberg,Australia,false,1970-04-28,0,0,0,0,0,4,0,256-287,47.1%
+273,Taylor Dent,United States,false,1981-04-24,0,0,0,0,0,4,0,151-140,51.9%
+273,Fernando Meligeni,Brazil,false,1971-04-12,0,0,0,0,0,3,0,202-217,48.2%
+273,Franco Squillari,Argentina,false,1975-08-22,0,0,0,0,0,3,0,155-165,48.4%
+273,Igor Andreev,Russian Federation,false,1983-07-14,0,0,0,0,0,3,0,237-231,50.6%
+273,Joachim Johansson,Sweden,false,1982-07-01,0,0,0,0,0,3,0,72-59,55.0%
+273,Jose Acasuso,Argentina,false,1982-10-20,0,0,0,0,0,3,0,193-183,51.3%
+273,Paul Annacone,United States,false,1963-03-20,0,0,0,0,0,3,0,157-130,54.7%
+273,Peter Lundgren,Sweden,false,1965-01-29,0,0,0,0,0,3,0,119-136,46.7%
+273,Richey Reneberg,United States,false,1965-10-05,0,0,0,0,0,3,0,307-263,53.9%
+273,Viktor Troicki,Serbia,true,1986-02-10,0,0,0,0,0,3,0,294-272,51.9%
+273,Andrei Cherkasov,Russian Federation,false,1970-07-04,0,0,0,0,0,2,0,193-214,47.4%
+273,Bernd Karbacher,Germany,false,1968-04-03,0,0,0,0,0,2,0,135-161,45.6%
+273,Byron Black,Zimbabwe,false,1969-10-06,0,0,0,0,0,2,0,276-248,52.7%
+273,David Pate,United States,false,1962-04-16,0,0,0,0,0,2,0,181-168,51.9%
+273,Francois Jauffret,France,false,1942-02-09,0,0,0,0,0,2,0,212-140,60.2%
+273,Juan Gisbert,Spain,false,1942-04-05,0,0,0,0,0,2,0,213-159,57.3%
+273,Martin Verkerk,Netherlands,false,1978-10-31,0,0,0,0,0,2,0,59-70,45.7%
+273,Paul Mcnamee,Australia,false,1954-11-12,0,0,0,0,0,2,0,245-230,51.6%
+273,Paul Haarhuis,Netherlands,false,1966-02-19,0,0,0,0,0,1,0,267-258,50.9%
+273,Vincent Spadea,United States,false,1974-07-19,0,0,0,0,0,1,0,311-359,46.4%
+305,Albert Portas,Spain,false,1973-11-15,0,0,0,1,0,1,0,142-198,41.8%
+305,Guillermo Garcia Lopez,Spain,false,1983-06-04,0,0,0,0,0,5,0,297-354,45.6%
+305,Jiri Hrebec,Czech Republic,false,1950-09-19,0,0,0,0,0,4,0,185-178,51.0%
+305,Steve Johnson,United States,true,1989-12-24,0,0,0,0,0,4,0,169-171,49.7%
+305,Thomaz Bellucci,Brazil,true,1987-12-30,0,0,0,0,0,4,0,200-217,48.0%
+305,Andrea Gaudenzi,Italy,false,1973-07-30,0,0,0,0,0,3,0,219-231,48.7%
+305,Andreas Seppi,Italy,true,1984-02-21,0,0,0,0,0,3,0,377-406,48.1%
+305,Benoit Paire,France,true,1989-05-08,0,0,0,0,0,3,0,225-249,47.5%
+305,Bohdan Ulihrach,Czech Republic,false,1975-02-23,0,0,0,0,0,3,0,230-246,48.3%
+305,Kenneth Carlsen,Denmark,false,1973-04-17,0,0,0,0,0,3,0,267-288,48.1%
+305,Marco Cecchinato,Italy,true,1992-09-30,0,0,0,0,0,3,0,51-93,35.4%
+305,Ronald Agenor,United States,false,1964-11-13,0,0,0,0,0,3,0,227-257,46.9%
+305,Slava Dosedel,Czech Republic,false,1970-08-14,0,0,0,0,0,3,0,196-193,50.4%
+305,Victor Amaya,United States,false,1954-07-02,0,0,0,0,0,3,0,187-173,51.9%
+305,Xavier Malisse,Belgium,false,1980-07-19,0,0,0,0,0,3,0,294-274,51.8%
+305,Albert Ramos,Spain,true,1988-01-17,0,0,0,0,0,2,0,229-252,47.6%
+305,Bob Giltinan,Australia,false,1949-04-07,0,0,0,0,0,2,0,85-115,42.5%
+305,Buster C Mottram,United Kingdom,false,1955-04-25,0,0,0,0,0,2,0,301-181,62.4%
+305,Darren Cahill,Australia,false,1965-10-02,0,0,0,0,0,2,0,133-122,52.2%
+305,Filip Dewulf,Belgium,false,1972-03-15,0,0,0,0,0,2,0,97-125,43.7%
+305,Jannik Sinner,Italy,true,2001-08-16,0,0,0,0,0,2,0,44-27,62.0%
+305,Jarkko Nieminen,Finland,false,1981-07-23,0,0,0,0,0,2,0,408-348,54.0%
+305,Leonardo Mayer,Argentina,true,1987-05-15,0,0,0,0,0,2,0,179-197,47.6%
+305,Renzo Furlan,Italy,false,1970-05-17,0,0,0,0,0,2,0,223-240,48.2%
+305,Georges Goven,France,false,1948-04-26,0,0,0,0,0,1,0,195-229,46.0%
+305,Pat Dupre,United States,false,1954-09-16,0,0,0,0,0,1,0,182-198,47.9%
+305,Raymond Moore,South Africa,false,1946-08-24,0,0,0,0,0,1,0,341-381,47.2%
+305,Tom Gullikson,United States,false,1951-09-08,0,0,0,0,0,1,0,219-225,49.3%
+305,Frank Froehling,United States,false,1942-05-19,0,0,0,0,0,0,0,80-112,41.7%
+334,Roberto Carretero,Spain,false,1975-08-30,0,0,0,1,0,1,0,23-45,33.8%
+334,Gerald Battrick,United Kingdom,false,1947-05-27,0,0,0,0,0,4,0,171-199,46.2%
+334,Horacio De La Pena,Argentina,false,1966-08-01,0,0,0,0,0,4,0,190-180,51.4%
+334,Marty Davis,United States,false,1958-11-15,0,0,0,0,0,4,0,157-173,47.6%
+334,Nicolas Mahut,France,true,1982-01-21,0,0,0,0,0,4,0,181-225,44.6%
+334,Sergiy Stakhovsky,Ukraine,true,1986-01-06,0,0,0,0,0,4,0,172-213,44.7%
+334,Fernando Vicente,Spain,false,1977-03-08,0,0,0,0,0,3,0,157-213,42.4%
+334,Franco Davin,Argentina,false,1970-01-11,0,0,0,0,0,3,0,153-155,49.7%
+334,Jurgen Fassbender,Germany,false,1948-05-28,0,0,0,0,0,3,0,182-166,52.3%
+334,Kelly Evernden,New Zealand,false,1961-09-21,0,0,0,0,0,3,0,136-147,48.1%
+334,Nicklas Kulti,Sweden,false,1971-04-22,0,0,0,0,0,3,0,154-182,45.8%
+334,Peter Feigl,Austria,false,1951-11-30,0,0,0,0,0,3,0,120-126,48.8%
+334,Stefan Koubek,Austria,false,1977-01-02,0,0,0,0,0,3,0,215-253,45.9%
+334,Dan Goldie,United States,false,1963-10-03,0,0,0,0,0,2,0,122-117,51.0%
+334,Davide Sanguinetti,Italy,false,1972-08-25,0,0,0,0,0,2,0,170-244,41.1%
+334,Federico Delbonis,Argentina,true,1990-10-05,0,0,0,0,0,2,0,139-161,46.3%
+334,Gilles Muller,Luxembourg,false,1983-05-09,0,0,0,0,0,2,0,232-213,52.1%
+334,Karim Alami,Morocco,false,1973-05-24,0,0,0,0,0,2,0,163-187,46.6%
+334,Kyle Edmund,United Kingdom,true,1995-01-08,0,0,0,0,0,2,0,116-115,50.2%
+334,Mark Dickson,United States,false,1959-12-08,0,0,0,0,0,2,0,128-119,51.8%
+334,Aslan Karatsev,Russian Federation,true,1993-09-04,0,0,0,0,0,1,0,20-15,57.1%
+334,Barry Phillips Moore,Australia,false,1937-07-09,0,0,0,0,0,1,0,200-223,47.3%
+334,Derrick Rostagno,United States,false,1965-10-25,0,0,0,0,0,1,0,191-184,50.9%
+334,Jan Gunnarsson,Sweden,false,1962-05-30,0,0,0,0,0,1,0,188-203,48.1%
+334,Patrick McEnroe,United States,false,1966-07-01,0,0,0,0,0,1,0,140-163,46.2%
+334,Rod Frawley,Australia,false,1952-09-08,0,0,0,0,0,1,0,109-136,44.5%
+334,Jerzy Janowicz,Poland,false,1990-11-13,0,0,0,0,0,0,0,102-95,51.8%
+334,John Marks,Australia,false,1952-12-09,0,0,0,0,0,0,0,28-81,25.7%
+334,Julien Benneteau,France,false,1981-12-20,0,0,0,0,0,0,0,272-297,47.8%
+334,Pierre Barthes,France,false,1941-09-13,0,0,0,0,0,0,0,182-184,49.7%
+364,Alberto Martin,Spain,false,1978-08-20,0,0,0,0,0,3,0,218-269,44.8%
+364,Damir Dzumhur,Bosnia and Herzegovina,true,1992-05-20,0,0,0,0,0,3,0,117-129,47.6%
+364,David Prinosil,Germany,false,1973-03-09,0,0,0,0,0,3,0,169-221,43.3%
+364,Javier Frana,Argentina,false,1966-12-25,0,0,0,0,0,3,0,163-158,50.8%
+364,Joao Sousa,Portugal,true,1989-03-30,0,0,0,0,0,3,0,196-229,46.1%
+364,Mario Martinez,"Bolivia, Plurinational State of",false,1961-09-12,0,0,0,0,0,3,0,90-79,53.3%
+364,Mike Bauer,United States,false,1959-06-29,0,0,0,0,0,3,0,75-91,45.2%
+364,Paolo Cane,Italy,false,1965-04-09,0,0,0,0,0,3,0,136-131,50.9%
+364,Pedro Rebolledo,Chile,false,1960-12-17,0,0,0,0,0,3,0,111-114,49.3%
+364,Robert Maud,South Africa,false,1946-08-12,0,0,0,0,0,3,0,101-126,44.5%
+364,Van Winitsky,United States,false,1959-03-12,0,0,0,0,0,3,0,106-134,44.2%
+364,Victor Estrella,Dominican Republic,false,1980-08-02,0,0,0,0,0,3,0,80-79,50.3%
+364,Brad Drewett,Australia,false,1958-07-19,0,0,0,0,0,2,0,179-225,44.3%
+364,Christo Van Rensburg,South Africa,false,1962-10-23,0,0,0,0,0,2,0,166-160,50.9%
+364,Filippo Volandri,Italy,false,1981-09-05,0,0,0,0,0,2,0,178-224,44.3%
+364,Frew Mcmillan,South Africa,false,1942-05-20,0,0,0,0,0,2,0,177-240,42.4%
+364,Geoff Masters,Australia,false,1950-09-19,0,0,0,0,0,2,0,233-253,47.9%
+364,Han Jurgen Pohmann,Germany,false,1947-05-23,0,0,0,0,0,2,0,122-123,49.8%
+364,Jerome Golmard,France,false,1973-09-09,0,0,0,0,0,2,0,144-143,50.2%
+364,Jim Grabb,United States,false,1964-04-14,0,0,0,0,0,2,0,179-199,47.4%
+364,Laslo Djere,Serbia,true,1995-06-02,0,0,0,0,0,2,0,61-66,48.0%
+364,Lorenzo Sonego,Italy,true,1995-05-11,0,0,0,0,0,2,0,48-52,48.0%
+364,Marc Kevin Goellner,Germany,false,1970-09-22,0,0,0,0,0,2,0,160-194,45.2%
+364,Mike Belkin,Canada,false,1945-06-29,0,0,0,0,0,2,0,75-53,58.6%
+364,Omar Camporese,Italy,false,1968-05-08,0,0,0,0,0,2,0,150-157,48.9%
+364,Pavel Slozil,Czech Republic,false,1955-12-29,0,0,0,0,0,2,0,146-162,47.4%
+364,Robert Vant Hof,United States,false,1959-04-10,0,0,0,0,0,2,0,83-105,44.1%
+364,Robin Haase,Netherlands,true,1987-04-06,0,0,0,0,0,2,0,229-270,45.9%
+364,Sammy Giammalva Jr,United States,false,1963-03-24,0,0,0,0,0,2,0,161-164,49.5%
+364,Shlomo Glickstein,Israel,false,1958-01-06,0,0,0,0,0,2,0,189-160,54.2%
+364,Steve Darcis,Belgium,false,1984-03-13,0,0,0,0,0,2,0,118-134,46.8%
+364,Ulrich Pinner,Germany,false,1954-02-07,0,0,0,0,0,2,0,151-130,53.7%
+364,Vladimir Zednik,Czech Republic,false,1947-02-01,0,0,0,0,0,2,0,113-151,42.8%
+364,Andreas Vinciguerra,Sweden,false,1981-02-19,0,0,0,0,0,1,0,87-103,45.8%
+364,Antonio Zugarelli,Italy,false,1950-01-17,0,0,0,0,0,1,0,115-155,42.6%
+364,Bob Carmichael,Australia,false,1940-07-04,0,0,0,0,0,1,0,211-255,45.3%
+364,Carlos Kirmayr,Brazil,false,1950-09-23,0,0,0,0,0,1,0,152-171,47.1%
+364,Casper Ruud,Norway,true,1998-12-22,0,0,0,0,0,1,0,68-54,55.7%
+364,Dusan Lajovic,Serbia,true,1990-06-30,0,0,0,0,0,1,0,140-176,44.3%
+364,Galo Blanco,Spain,false,1976-10-08,0,0,0,0,0,1,0,122-175,41.1%
+364,Gilbert Schaller,Austria,false,1969-03-17,0,0,0,0,0,1,0,115-132,46.6%
+364,Guido Pella,Argentina,true,1990-05-17,0,0,0,0,0,1,0,112-125,47.3%
+364,Ismail El Shafei,Egypt,false,1947-11-15,0,0,0,0,0,1,0,244-294,45.4%
+364,Jeremy Chardy,France,true,1987-02-12,0,0,0,0,0,1,0,291-294,49.7%
+364,John Cooper,Australia,false,1946-11-04,0,0,0,0,0,1,0,73-74,49.7%
+364,John Millman,Australia,true,1989-06-14,0,0,0,0,0,1,0,91-112,44.8%
+364,Mikael Tillstrom,Sweden,false,1972-03-05,0,0,0,0,0,1,0,112-113,49.8%
+364,Tennys Sandgren,United States,true,1991-07-22,0,0,0,0,0,1,0,41-60,40.6%
+364,Ben Testerman,United States,false,1962-02-02,0,0,0,0,0,0,0,87-102,46.0%
+364,Christian Bergstrom,Sweden,false,1967-07-19,0,0,0,0,0,0,0,161-162,49.8%
+364,Felix Auger Aliassime,Canada,true,2000-08-08,0,0,0,0,0,0,0,74-59,55.6%
+364,Michiel Schapers,Netherlands,false,1959-10-11,0,0,0,0,0,0,0,166-187,47.0%
+364,Vasek Pospisil,Canada,true,1990-06-23,0,0,0,0,0,0,0,122-156,43.9%
+417,Andrei Olhovskiy,Russian Federation,false,1966-04-15,0,0,0,0,0,2,0,117-165,41.5%
+417,Andrew Ilie,Australia,false,1976-04-18,0,0,0,0,0,2,0,89-116,43.4%
+417,Angel Gimenez,Spain,false,1955-10-10,0,0,0,0,0,2,0,86-108,44.3%
+417,Bernard Mitton,South Africa,false,1954-11-09,0,0,0,0,0,2,0,206-226,47.7%
+417,Bryan Shelton,United States,false,1965-12-22,0,0,0,0,0,2,0,104-137,43.2%
+417,Carlos Berlocq,Argentina,false,1983-02-03,0,0,0,0,0,2,0,134-193,41.0%
+417,Christian Kuhnke,Germany,false,1939-04-13,0,0,0,0,0,2,0,63-33,65.6%
+417,Christian Saceanu,Germany,false,1968-07-08,0,0,0,0,0,2,0,71-110,39.2%
+417,David Sanchez,Spain,false,1978-04-20,0,0,0,0,0,2,0,86-118,42.2%
+417,Denis Istomin,Uzbekistan,false,1986-09-07,0,0,0,0,0,2,0,229-261,46.7%
+417,Erik Van Dillen,United States,false,1951-02-21,0,0,0,0,0,2,0,178-233,43.3%
+417,Florent Serra,France,false,1981-02-28,0,0,0,0,0,2,0,123-170,42.0%
+417,Francesco Cancellotti,Italy,false,1963-02-27,0,0,0,0,0,2,0,114-118,49.1%
+417,Haroon Rahim,Pakistan,false,1949-11-12,0,0,0,0,0,2,0,142-170,45.5%
+417,Jaime Oncins,Brazil,false,1970-06-16,0,0,0,0,0,2,0,76-95,44.4%
+417,Jan Kroslak,Slovakia,false,1974-10-17,0,0,0,0,0,2,0,76-96,44.2%
+417,Jeff Tarango,United States,false,1968-11-20,0,0,0,0,0,2,0,239-294,44.8%
+417,Jiri Vesely,Czech Republic,true,1993-07-10,0,0,0,0,0,2,0,127-143,47.0%
+417,Jonathan Stark,United States,false,1971-04-03,0,0,0,0,0,2,0,136-151,47.4%
+417,Julian Alonso,Spain,false,1977-08-02,0,0,0,0,0,2,0,52-64,44.8%
+417,Kelly Jones,United States,false,1964-03-31,0,0,0,0,0,2,0,48-84,36.4%
+417,Luis Horna,Peru,false,1980-09-14,0,0,0,0,0,2,0,141-146,49.1%
+417,Lukas Rosol,Czech Republic,false,1985-07-24,0,0,0,0,0,2,0,123-158,43.8%
+417,Marian Vajda,Slovakia,false,1965-03-24,0,0,0,0,0,2,0,119-152,43.9%
+417,Martin Sinner,Germany,false,1968-02-07,0,0,0,0,0,2,0,50-78,39.1%
+417,Mike Estep,United States,false,1949-07-19,0,0,0,0,0,2,0,112-178,38.6%
+417,Milan Holecek,Czech Republic,false,1943-10-23,0,0,0,0,0,2,0,114-157,42.1%
+417,Nicolas Pereira,"Venezuela, Bolivarian Republic of",false,1970-09-29,0,0,0,0,0,2,0,84-130,39.3%
+417,Olivier Rochus,Belgium,false,1981-01-18,0,0,0,0,0,2,0,238-276,46.3%
+417,Patrick Baur,Germany,false,1965-05-03,0,0,0,0,0,2,0,67-107,38.5%
+417,Rajeev Ram,United States,false,1984-03-18,0,0,0,0,0,2,0,57-93,38.0%
+417,Reilly Opelka,United States,true,1997-08-28,0,0,0,0,0,2,0,49-52,48.5%
+417,Sherwood Stewart,United States,false,1946-06-06,0,0,0,0,0,2,0,168-234,41.8%
+417,Simon Youl,Australia,false,1965-07-01,0,0,0,0,0,2,0,93-139,40.1%
+417,Stefano Pescosolido,Italy,false,1971-06-13,0,0,0,0,0,2,0,109-159,40.7%
+417,Terry Moor,United States,false,1952-04-23,0,0,0,0,0,2,0,239-228,51.2%
+417,Tomas Carbonell,Spain,false,1968-08-07,0,0,0,0,0,2,0,194-223,46.5%
+417,Tom Edlefsen,United States,false,1941-12-12,0,0,0,0,0,2,0,95-136,41.1%
+417,Ugo Humbert,France,true,1998-06-26,0,0,0,0,0,2,0,47-43,52.2%
+417,Yahiya Doumbia,Senegal,false,1963-08-25,0,0,0,0,0,2,0,43-38,53.1%
+417,Adrian Mannarino,France,true,1988-06-29,0,0,0,0,0,1,0,208-245,45.9%
+417,Adrian Voinea,Romania,false,1974-08-06,0,0,0,0,0,1,0,136-176,43.6%
+417,Alex Obrien,United States,false,1970-03-07,0,0,0,0,0,1,0,93-136,40.6%
+417,Andreas Maurer,Germany,false,1958-03-08,0,0,0,0,0,1,0,115-142,44.7%
+417,Andrey Golubev,Kazakhstan,false,1987-07-22,0,0,0,0,0,1,0,67-117,36.4%
+417,Arnaud Di Pasquale,France,false,1979-02-11,0,0,0,0,0,1,0,69-98,41.3%
+417,Billy Martin,United States,false,1956-12-25,0,0,0,0,0,1,0,145-175,45.3%
+417,Daniel Evans,United Kingdom,true,1990-05-23,0,0,0,0,0,1,0,83-89,48.3%
+417,Diego Perez,Uruguay,false,1962-02-09,0,0,0,0,0,1,0,225-236,48.8%
+417,Frances Tiafoe,United States,true,1998-01-20,0,0,0,0,0,1,0,76-97,43.9%
+417,Horacio Zeballos,Argentina,true,1985-04-27,0,0,0,0,0,1,0,91-133,40.6%
+417,Istvan Gulyas,Hungary,false,1931-10-14,0,0,0,0,0,1,0,62-60,50.8%
+417,Jonathan Canter,United States,false,1965-06-04,0,0,0,0,0,1,0,68-96,41.5%
+417,Larry Stefanki,United States,false,1957-07-23,0,0,0,0,0,1,0,52-87,37.4%
+417,Leander Paes,India,false,1973-06-17,0,0,0,0,0,1,0,101-97,51.0%
+417,Marton Fucsovics,Hungary,true,1992-02-08,0,0,0,0,0,1,0,96-87,52.5%
+417,Milan Srejber,Czech Republic,false,1963-12-30,0,0,0,0,0,1,0,128-129,49.8%
+417,Mischa Zverev,Germany,true,1987-08-22,0,0,0,0,0,1,0,133-199,40.1%
+417,Ove Nils Bengtson,Sweden,false,1945-04-05,0,0,0,0,0,1,0,132-180,42.3%
+417,Pablo Arraya,Peru,false,1961-10-21,0,0,0,0,0,1,0,179-180,49.9%
+417,Philipp Petzschner,Germany,false,1984-03-24,0,0,0,0,0,1,0,88-107,45.1%
+417,Scott Draper,Australia,false,1974-06-05,0,0,0,0,0,1,0,107-129,45.3%
+417,Sergio Casal,Spain,false,1962-09-08,0,0,0,0,0,1,0,125-148,45.8%
+417,Shuzo Matsuoka,Japan,false,1967-11-06,0,0,0,0,0,1,0,148-164,47.4%
+417,Taylor Harry Fritz,United States,true,1997-10-28,0,0,0,0,0,1,0,106-105,50.2%
+417,Thomas Hogstedt,Sweden,false,1963-09-21,0,0,0,0,0,1,0,89-152,36.9%
+417,Ulf Stenlund,Sweden,false,1967-01-21,0,0,0,0,0,1,0,52-44,54.2%
+417,Victor Hanescu,Romania,false,1981-07-21,0,0,0,0,0,1,0,201-244,45.2%
+417,Vincent Van Patten,United States,false,1957-10-17,0,0,0,0,0,1,0,109-117,48.2%
+417,Wesley Moodie,South Africa,false,1979-02-14,0,0,0,0,0,1,0,58-70,45.3%
+417,Wilhelm Bungert,Germany,false,1939-04-01,0,0,0,0,0,1,0,65-33,66.3%
+417,Alexander Popp,Germany,false,1976-11-04,0,0,0,0,0,0,0,45-65,40.9%
+417,Allan Stone,Australia,false,1945-10-14,0,0,0,0,0,0,0,225-237,48.7%
+417,Bart Wuyts,Belgium,false,1969-09-15,0,0,0,0,0,0,0,48-69,41.0%
+417,Christophe Rochus,Belgium,false,1978-12-15,0,0,0,0,0,0,0,118-219,35.0%
+417,Christophe Roger Vasselin,France,false,1957-07-08,0,0,0,0,0,0,0,91-130,41.2%
+417,Cristiano Caratti,Italy,false,1970-05-24,0,0,0,0,0,0,0,72-117,38.1%
+417,Filip Krajinovic,Serbia,true,1992-02-27,0,0,0,0,0,0,0,89-84,51.4%
+417,Francisco Gonzalez,Paraguay,false,1955-11-19,0,0,0,0,0,0,0,112-174,39.2%
+417,Francisco Maciel,Mexico,false,1964-07-01,0,0,0,0,0,0,0,50-57,46.7%
+417,Harel Levy,Israel,false,1978-08-05,0,0,0,0,0,0,0,63-99,38.9%
+417,Henrik Holm,Sweden,false,1968-08-22,0,0,0,0,0,0,0,96-110,46.6%
+417,Hyeon Chung,"Korea, Republic of",true,1996-05-19,0,0,0,0,0,0,0,79-69,53.4%
+417,Jim Osborne,United States,false,1945-02-01,0,0,0,0,0,0,0,97-112,46.4%
+417,Leif Shiras,United States,false,1959-08-21,0,0,0,0,0,0,0,71-103,40.8%
+417,Patrik Kuhnen,Germany,false,1966-02-11,0,0,0,0,0,0,0,127-153,45.4%
+417,Peter Rennert,United States,false,1958-12-26,0,0,0,0,0,0,0,49-60,45.0%
+417,Rodney Harmon,United States,false,1961-08-16,0,0,0,0,0,0,0,34-42,44.7%
+417,Thierry Champion,France,false,1966-08-31,0,0,0,0,0,0,0,102-164,38.3%
+417,Vladimir Voltchkov,Belarus,false,1978-04-07,0,0,0,0,0,0,0,72-91,44.2%
+507,Alejandro Olmedo,Peru,false,1936-03-24,0,0,0,0,0,1,0,46-56,45.1%
+507,Alex Antonitsch,Austria,false,1966-02-08,0,0,0,0,0,1,0,106-144,42.4%
+507,Alex Calatrava,Spain,false,1973-06-14,0,0,0,0,0,1,0,67-109,38.1%
+507,Alexei Popyrin,Australia,true,1999-08-05,0,0,0,0,0,1,0,28-34,45.2%
+507,Antony Dupuis,France,false,1973-02-24,0,0,0,0,0,1,0,85-128,39.9%
+507,Benjamin Becker,Germany,false,1981-06-16,0,0,0,0,0,1,0,153-220,41.0%
+507,Bernard Mignot,Belgium,false,1948-12-03,0,0,0,0,0,1,0,51-61,45.5%
+507,Birger Andersson,Sweden,false,1951-03-26,0,0,0,0,0,1,0,37-69,34.9%
+507,Carsten Arriens,Germany,false,1969-04-11,0,0,0,0,0,1,0,28-36,43.8%
+507,Christian Miniussi,Argentina,false,1967-07-05,0,0,0,0,0,1,0,58-82,41.4%
+507,Chuck Adams,United States,false,1971-04-23,0,0,0,0,0,1,0,83-93,47.2%
+507,Claudio Mezzadri,Switzerland,false,1965-06-10,0,0,0,0,0,1,0,117-137,46.1%
+507,Claudio Panatta,Italy,false,1960-02-02,0,0,0,0,0,1,0,105-142,42.5%
+507,Claudio Pistolesi,Italy,false,1967-08-25,0,0,0,0,0,1,0,77-111,41.0%
+507,Colin Dowdeswell,United Kingdom,false,1955-05-12,0,0,0,0,0,1,0,118-176,40.1%
+507,Dan Cassidy,United States,false,1961-04-29,0,0,0,0,0,1,0,35-75,31.8%
+507,Daniele Bracciali,Italy,false,1978-01-10,0,0,0,0,0,1,0,35-55,38.9%
+507,Danny Saltz,United States,false,1961-07-30,0,0,0,0,0,1,0,17-20,45.9%
+507,Dimitri Poliakov,Ukraine,false,1968-01-19,0,0,0,0,0,1,0,35-47,42.7%
+507,Dominique Bedel,France,false,1957-02-20,0,0,0,0,0,1,0,59-88,40.1%
+507,Eddie Edwards,South Africa,false,1956-07-03,0,0,0,0,0,1,0,87-134,39.4%
+507,Eric Jelen,Germany,false,1965-03-11,0,0,0,0,0,1,0,135-136,49.8%
+507,Erick Iskersky,United States,false,1958-01-25,0,0,0,0,0,1,0,33-62,34.7%
+507,Frederic Fontang,France,false,1970-03-18,0,0,0,0,0,1,0,28-60,31.8%
+507,Fritz Buehning,United States,false,1960-03-05,0,0,0,0,0,1,0,114-120,48.7%
+507,Gabriel Markus,Argentina,false,1970-03-31,0,0,0,0,0,1,0,59-72,45.0%
+507,Gianluca Pozzi,Italy,false,1965-06-17,0,0,0,0,0,1,0,175-258,40.4%
+507,Gianni Ocleppo,Italy,false,1957-04-06,0,0,0,0,0,1,0,103-127,44.8%
+507,Guillaume Raoux,France,false,1970-02-14,0,0,0,0,0,1,0,179-225,44.3%
+507,Hans Kary,Austria,false,1949-02-23,0,0,0,0,0,1,0,166-229,42.0%
+507,Hernan Gumy,Argentina,false,1972-03-05,0,0,0,0,0,1,0,115-128,47.3%
+507,Howard Schoenfield,United States,false,1957-11-15,0,0,0,0,0,1,0,11-42,20.8%
+507,Hyung Taik Lee,"Korea, Republic of",false,1976-01-03,0,0,0,0,0,1,0,161-164,49.5%
+507,Igor Kunitsyn,Russian Federation,false,1981-09-30,0,0,0,0,0,1,0,89-153,36.8%
+507,Ivan Dodig,Croatia,false,1985-01-02,0,0,0,0,0,1,0,118-140,45.7%
+507,Jan Leschly,Denmark,false,1940-09-11,0,0,0,0,0,1,0,52-34,60.5%
+507,Jan Norback,Sweden,false,1956-03-06,0,0,0,0,0,1,0,37-77,32.5%
+507,Jan Vacek,Czech Republic,false,1976-05-10,0,0,0,0,0,1,0,30-60,33.3%
+507,Jared Palmer,United States,false,1971-07-02,0,0,0,0,0,1,0,69-80,46.3%
+507,Jay Lapidus,United States,false,1959-05-01,0,0,0,0,0,1,0,75-106,41.4%
+507,Jeff Austin,United States,false,1951-07-05,0,0,0,0,0,1,0,52-81,39.1%
+507,Jeremy Bates,United Kingdom,false,1962-06-19,0,0,0,0,0,1,0,130-192,40.4%
+507,Jerome Haehnel,France,false,1980-07-14,0,0,0,0,0,1,0,8-18,30.8%
+507,Jim Pugh,United States,false,1964-02-05,0,0,0,0,0,1,0,85-95,47.2%
+507,Jordi Burillo,Spain,false,1972-12-07,0,0,0,0,0,1,0,92-129,41.6%
+507,Jose Francisco Altur,Spain,false,1968-03-24,0,0,0,0,0,1,0,31-66,32.0%
+507,Juan Antonio Marin,Costa Rica,false,1975-03-02,0,0,0,0,0,1,0,80-123,39.4%
+507,Juan Balcells,Spain,false,1975-06-20,0,0,0,0,0,1,0,41-49,45.6%
+507,Juan Ignacio Londero,Argentina,true,1993-08-15,0,0,0,0,0,1,0,31-41,43.1%
+507,Juan Manuel Cerundolo,Argentina,true,2001-11-15,0,0,0,0,0,1,0,6-2,75.0%
+507,Julien Boutter,France,false,1974-04-05,0,0,0,0,0,1,0,62-84,42.5%
+507,Kjell Johansson,Sweden,false,1951-02-12,0,0,0,0,0,1,0,124-143,46.4%
+507,Lars Burgsmuller,Germany,false,1975-12-06,0,0,0,0,0,1,0,90-152,37.2%
+507,Lars Elvstrom,Denmark,false,1949-08-18,0,0,0,0,0,1,0,15-21,41.7%
+507,Leonardo Lavalle,Mexico,false,1967-07-14,0,0,0,0,0,1,0,84-115,42.2%
+507,Libor Pimek,Belgium,false,1963-08-03,0,0,0,0,0,1,0,126-121,51.0%
+507,Mark Koevermans,Netherlands,false,1968-02-03,0,0,0,0,0,1,0,72-84,46.2%
+507,Marko Ostoja,Croatia,false,1960-10-20,0,0,0,0,0,1,0,88-142,38.3%
+507,Markus Zoecke,Germany,false,1968-05-10,0,0,0,0,0,1,0,67-103,39.4%
+507,Mark Vines,United States,false,1957-02-23,0,0,0,0,0,1,0,8-24,25.0%
+507,Massimiliano Narducci,Italy,false,1964-02-25,0,0,0,0,0,1,0,18-27,40.0%
+507,Matt Anger,United States,false,1963-06-20,0,0,0,0,0,1,0,82-106,43.6%
+507,Matt Doyle,United States,false,1958-01-13,0,0,0,0,0,1,0,63-76,45.3%
+507,Matt Mitchell,United States,false,1957-03-16,0,0,0,0,0,1,0,64-104,38.1%
+507,Mauricio Hadad,Colombia,false,1971-12-07,0,0,0,0,0,1,0,66-54,55.0%
+507,Michal Tabara,Czech Republic,false,1979-08-11,0,0,0,0,0,1,0,40-55,42.1%
+507,Mikhail Kukushkin,Kazakhstan,true,1987-12-26,0,0,0,0,0,1,0,168-215,43.9%
+507,Miomir Kecmanovic,Serbia,true,1999-08-31,0,0,0,0,0,1,0,48-43,52.7%
+507,Mirza Basic,Bosnia and Herzegovina,false,1991-07-12,0,0,0,0,0,1,0,31-36,46.3%
+507,Nduka Odizor,Nigeria,false,1958-08-09,0,0,0,0,0,1,0,96-128,42.9%
+507,Neville Godwin,South Africa,false,1975-01-31,0,0,0,0,0,1,0,36-56,39.1%
+507,Nicklas Kroon,Sweden,false,1966-02-05,0,0,0,0,0,1,0,48-65,42.5%
+507,Nick Saviano,United States,false,1956-06-05,0,0,0,0,0,1,0,162-200,44.8%
+507,Nicola Pietrangeli,Italy,false,1933-09-11,0,0,0,0,0,1,0,51-36,58.6%
+507,Nicolas Jarry,Chile,true,1995-10-11,0,0,0,0,0,1,0,52-58,47.3%
+507,Paolo Lorenzi,Italy,true,1981-12-15,0,0,0,0,0,1,0,110-184,37.4%
+507,Per Hjertquist,Sweden,false,1960-04-06,0,0,0,0,0,1,0,60-73,45.1%
+507,Peter Doohan,Australia,false,1961-05-02,0,0,0,0,0,1,0,50-82,37.9%
+507,Peter Gojowczyk,Germany,true,1989-07-15,0,0,0,0,0,1,0,62-76,44.9%
+507,Peter Wessels,Netherlands,false,1978-05-07,0,0,0,0,0,1,0,45-60,42.9%
+507,Pieter Aldrich,South Africa,false,1965-09-07,0,0,0,0,0,1,0,36-40,47.4%
+507,Radu Albot,"Moldova, Republic of",true,1989-11-11,0,0,0,0,0,1,0,85-109,43.8%
+507,Ramanathan Krishnan,India,false,1937-04-11,0,0,0,0,0,1,0,22-13,62.9%
+507,Ricardo Mello,Brazil,false,1980-12-21,0,0,0,0,0,1,0,60-94,39.0%
+507,Richard Meyer,United States,false,1955-09-04,0,0,0,0,0,1,0,42-77,35.3%
+507,Ricki Osterthun,Germany,false,1964-05-02,0,0,0,0,0,1,0,60-79,43.2%
+507,Robbie Weiss,United States,false,1966-12-01,0,0,0,0,0,1,0,48-78,38.1%
+507,Roberto Arguello,Argentina,false,1963-05-12,0,0,0,0,0,1,0,61-84,42.1%
+507,Roberto Carballes Baena,Spain,true,1993-03-23,0,0,0,0,0,1,0,56-69,44.8%
+507,Rolf Gehring,Germany,false,1955-11-25,0,0,0,0,0,1,0,120-144,45.5%
+507,Ron Holmberg,United States,false,1938-01-27,0,0,0,0,0,1,0,45-69,39.5%
+507,Ryan Harrison,United States,true,1992-05-07,0,0,0,0,0,1,0,118-159,42.6%
+507,Ryan Sweeting,United States,false,1987-07-14,0,0,0,0,0,1,0,35-57,38.0%
+507,Santiago Ventura,Spain,false,1980-01-05,0,0,0,0,0,1,0,38-59,39.2%
+507,Sargis Sargsian,Armenia,false,1973-06-03,0,0,0,0,0,1,0,155-209,42.6%
+507,Simone Colombo,Italy,false,1963-08-28,0,0,0,0,0,1,0,35-54,39.3%
+507,Taro Daniel,Japan,true,1993-01-27,0,0,0,0,0,1,0,53-84,38.7%
+507,Thiago Seyboth Wild,Brazil,true,2000-03-10,0,0,0,0,0,1,0,7-9,43.8%
+507,Wayne Arthurs,Australia,false,1971-03-18,0,0,0,0,0,1,0,133-159,45.5%
+507,Werner Zirngibl,Germany,false,1956-09-04,0,0,0,0,0,1,0,42-70,37.5%
+507,William Harris,United States,false,1947-01-14,0,0,0,0,0,1,0,7-8,46.7%
+507,Yoshihito Nishioka,Japan,true,1995-09-27,0,0,0,0,0,1,0,67-77,46.5%
+507,Yuichi Sugita,Japan,true,1988-09-18,0,0,0,0,0,1,0,54-86,38.6%
+507,Alex Radulescu,Germany,false,1974-12-07,0,0,0,0,0,0,0,40-56,41.7%
+507,Andre Sa,Brazil,false,1977-05-06,0,0,0,0,0,0,0,52-92,36.1%
+507,Belus Prajoux,Chile,false,1955-02-27,0,0,0,0,0,0,0,88-132,40.0%
+507,Boro Jovanovic,Croatia,false,1939-10-21,0,0,0,0,0,0,0,59-85,41.0%
+507,Brad Pearce,United States,false,1966-03-21,0,0,0,0,0,0,0,41-79,34.2%
+507,Brett Steven,New Zealand,false,1969-04-27,0,0,0,0,0,0,0,175-166,51.3%
+507,Broderick Dyke,Australia,false,1960-12-31,0,0,0,0,0,0,0,78-121,39.2%
+507,Bruce Manson,United States,false,1956-03-20,0,0,0,0,0,0,0,126-172,42.3%
+507,Byron Bertram,South Africa,false,1952-10-29,0,0,0,0,0,0,0,111-140,44.2%
+507,Chip Hooper,United States,false,1958-10-24,0,0,0,0,0,0,0,104-119,46.6%
+507,Christo Steyn,South Africa,false,1961-05-01,0,0,0,0,0,0,0,43-53,44.8%
+507,Diego Nargiso,Italy,false,1970-03-15,0,0,0,0,0,0,0,100-154,39.4%
+507,Drew Gitlin,United States,false,1958-05-26,0,0,0,0,0,0,0,34-48,41.5%
+507,Emilio Benfele Alvarez,Spain,false,1972-11-15,0,0,0,0,0,0,0,45-67,40.2%
+507,Eric Fromm,United States,false,1958-06-27,0,0,0,0,0,0,0,51-83,38.1%
+507,Francisco Roig,Spain,false,1968-04-01,0,0,0,0,0,0,0,64-96,40.0%
+507,Gary Muller,South Africa,false,1964-12-27,0,0,0,0,0,0,0,85-118,41.9%
+507,Gianluca Mager,Italy,true,1994-12-01,0,0,0,0,0,0,0,12-16,42.9%
+507,Hendrik Dreekmann,Germany,false,1975-01-29,0,0,0,0,0,0,0,97-118,45.1%
+507,Irakli Labadze,Georgia,false,1981-06-09,0,0,0,0,0,0,0,50-83,37.6%
+507,Ivan Molina,Colombia,false,1946-06-16,0,0,0,0,0,0,0,165-203,44.8%
+507,Jan Apell,Sweden,false,1969-11-04,0,0,0,0,0,0,0,44-68,39.3%
+507,John Andrews,United States,false,1952-02-05,0,0,0,0,0,0,0,31-48,39.2%
+507,Ken Flach,United States,false,1963-05-24,0,0,0,0,0,0,0,52-80,39.4%
+507,Lionel Roux,France,false,1973-04-12,0,0,0,0,0,0,0,76-117,39.4%
+507,Lloyd George Muirhead Harris,South Africa,true,1997-02-24,0,0,0,0,0,0,0,41-37,52.6%
+507,Lukasz Kubot,Poland,false,1982-05-16,0,0,0,0,0,0,0,97-130,42.7%
+507,Marcos Ondruska,South Africa,false,1972-12-18,0,0,0,0,0,0,0,118-147,44.5%
+507,Marius Copil,Romania,false,1990-10-17,0,0,0,0,0,0,0,63-88,41.7%
+507,Michel Kratochvil,Switzerland,false,1979-04-07,0,0,0,0,0,0,0,73-98,42.7%
+507,Olivier Delaitre,France,false,1967-06-01,0,0,0,0,0,0,0,130-179,42.1%
+507,Owen Davidson,Australia,false,1943-10-04,0,0,0,0,0,0,0,82-108,43.2%
+507,Pascal Portes,France,false,1959-05-28,0,0,0,0,0,0,0,102-123,45.3%
+507,Patricio Cornejo,Chile,false,1944-06-06,0,0,0,0,0,0,0,152-216,41.3%
+507,Paul Chamberlin,United States,false,1962-03-26,0,0,0,0,0,0,0,57-66,46.3%
+507,Paul Kronk,Australia,false,1954-09-22,0,0,0,0,0,0,0,112-188,37.3%
+507,Potito Starace,Italy,false,1981-07-14,0,0,0,0,0,0,0,162-193,45.6%
+507,Raemon Sluiter,Netherlands,false,1978-04-13,0,0,0,0,0,0,0,90-131,40.7%
+507,Ricardo Acuna,Chile,false,1958-01-13,0,0,0,0,0,0,0,74-115,39.2%
+507,Robin Drysdale,United Kingdom,false,1952-09-18,0,0,0,0,0,0,0,35-77,31.3%
+507,Santiago Giraldo,Colombia,false,1987-11-27,0,0,0,0,0,0,0,166-205,44.7%
+507,Stanislav Birner,Czech Republic,false,1956-10-11,0,0,0,0,0,0,0,63-121,34.2%
+507,Todd Witsken,United States,false,1963-11-04,0,0,0,0,0,0,0,115-135,46.0%
+507,Wanaro Ngodrella,France,false,1949-10-19,0,0,0,0,0,0,0,45-75,37.5%
+507,Yen Hsun Lu,"Taiwan, Province of China",true,1983-08-14,0,0,0,0,0,0,0,162-227,41.6%

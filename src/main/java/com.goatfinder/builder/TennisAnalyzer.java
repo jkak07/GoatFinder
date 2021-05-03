@@ -2,14 +2,56 @@ package com.goatfinder.builder;
 
 import java.util.List;
 
-public class TennisAnalyzer extends GoatAnalyzer{
+ class TennisAnalyzer extends GoatAnalyzer{
+     public final static int BEST_STAT_POINTS= 10;
+     public final static int RARE_STAT_POINTS = 5;
+     public final static int AVERAGE_STAT_POINTS = 2;
+     public final static int SPECIAL_STAT_COUNT_POINTS = 2;
 
-    public TennisAnalyzer(IParser fileData) {
+
+     public TennisAnalyzer(IParser fileData) {
         super(fileData);
-    }
+     }
 
     public void goatCalculator() {
+        for (IGoat player : dataSet.getDataRows()) {
 
+
+            double scoreBuilder = 0;
+            for (String statName : player.getGoatStats().getStatHolder().keySet()) {
+                double statValue = player.getGoatStats().getStatHolder().get(statName);
+                int count = 0;
+
+                if (statValue > 0) {
+                    if (statValue == dataMaximums.get(statName)) {
+                        scoreBuilder = scoreBuilder + BEST_STAT_POINTS;
+                        count ++;
+                    }
+                    if (dataMedian.get(statName) == 0){
+                        scoreBuilder = scoreBuilder + RARE_STAT_POINTS;
+                        count ++;
+                    }
+                    if (statValue >= dataMeans.get(statName)){
+                        scoreBuilder = scoreBuilder + AVERAGE_STAT_POINTS;
+                        count ++;
+                    }
+                    if(statValue < dataMeans.get(statName)){
+                        count --;
+                    }
+                    scoreBuilder = scoreBuilder + (count*SPECIAL_STAT_COUNT_POINTS*dataSet.getGoatOpinions().get(statName).getRating());
+
+
+
+
+
+                }
+                scoreBuilder = scoreBuilder + (GoatAnalyzer.normalize(statValue, dataMeans.get(statName), dataStandardDeviations.get(statName))
+                        * dataSet.getGoatOpinions().get(statName).getRating());
+
+            }
+            scoreBuilder*= periodMultiplier(player);
+            player.getGoatStats().setGoatScore(scoreBuilder);
+        }
     }
 
 
