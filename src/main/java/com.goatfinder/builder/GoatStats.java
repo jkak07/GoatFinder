@@ -2,14 +2,14 @@ package com.goatfinder.builder ;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Stats {
+class GoatStats  {
 
+    static final String PERIOD = "period" ;
     final private Map<String, Double> statHolder;
-
     private double gamesPlayed;
     private double goatScore;
 
-    public Stats() {
+    public GoatStats() {
         statHolder = new HashMap<>();
 
     }
@@ -18,17 +18,15 @@ public class Stats {
         return statHolder;
     }
 
-
-
     public void setPeriod(Double gamesPlayed){
         this.gamesPlayed = gamesPlayed;
     }
 
-    public void setGOATScore(double score) {
+    public void setGoatScore(double score) {
         goatScore = score;
     }
 
-    public double getGOATScore() {
+    public double getGoatScore() {
         return goatScore;
     }
 

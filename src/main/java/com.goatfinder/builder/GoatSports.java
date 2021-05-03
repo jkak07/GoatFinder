@@ -1,16 +1,16 @@
 package com.goatfinder.builder ;
 import java.util.Objects;
 
-public abstract class SportsGoat implements IGoat {
+ abstract class GoatSports implements IGoat {
 
     protected String name;
     protected int age;
-    protected Stats playerStats;
+    protected GoatStats playerStats;
 
     public String getName(){ return name;}
 
     public String toString(){
-        return this.name + "'s Goatness is: " + this.playerStats.getGOATScore();
+        return this.name + "'s Goatness is: " + this.playerStats.getGoatScore();
     }
 
     @Override
@@ -24,12 +24,12 @@ public abstract class SportsGoat implements IGoat {
         if(this.getClass() != op.getClass())
             return false;
 
-        BasketBallPlayerNBA otherPlayer = (BasketBallPlayerNBA) op;
+        BasketballPlayer otherPlayer = (BasketballPlayer) op;
 
         return this.name.equals(otherPlayer.name) && this.age == otherPlayer.age;
     }
 
-    public Stats getGoatStats(){
+    public GoatStats getGoatStats(){
 
         return playerStats;
     }

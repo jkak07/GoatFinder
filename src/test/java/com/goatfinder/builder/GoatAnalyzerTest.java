@@ -1,25 +1,37 @@
-import com.goatfinder.builder.GoatAnalyzer;
-import com.goatfinder.builder.Opinion;
-import com.goatfinder.builder.ParserNBA;
-import com.goatfinder.builder.nbaAnalyzer;
+package com.goatfinder.builder ;
+
 import org.junit.jupiter.api.*;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
+
 public class GoatAnalyzerTest {
 
     private String fileName;
     private Map<String, Opinion> opinion;
-    private ParserNBA parser;
+    private IParser parser;
     private GoatAnalyzer analyse;
     private List<Double> list;
+
+
 
     @BeforeEach
     @Test
     public void testDatasetUp() {
+
+
+
+
         opinion = new HashMap<>();
         opinion.put("G", Opinion.MEDIUM_POSITIVE);
         opinion.put("TOV", Opinion.MEDIUM_NEGATIVE);
@@ -28,15 +40,22 @@ public class GoatAnalyzerTest {
         opinion.put("FAKE", Opinion.STRONG_POSITIVE);
 
         fileName = "C:\\Users\\jason\\IdeaProjects\\projectA\\Data\\nba2021test.txt";
-        parser = new ParserNBA(fileName, opinion);
-        analyse = new nbaAnalyzer(parser);
+
+        parser = new BasketballParser(fileName, opinion);
+        analyse = new BasketballAnalyzer(parser);
 
         list = new ArrayList<>();
         list.add(2.0);list.add(3.0); list.add(88.0);list.add(14.0);
+
+
+
+
     }
 
     @Test
     public void testMean(){
+
+
 
         Assertions.assertEquals( 26.75,analyse.getDataMeans().get("FAKE"));
 
