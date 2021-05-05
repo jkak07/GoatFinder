@@ -39,7 +39,6 @@ public abstract class GoatAnalyzer  {
                 dataMeans.put(statName, GoatMath.mean(dataSet.getDataCols().get(statName)));
                 dataStandardDeviations.put(statName, GoatMath.standardDeviation(dataSet.getDataCols().get(statName)));
                 dataMaximums.put(statName, GoatMath.maximum(dataSet.getDataCols().get(statName)));
-                dataSkew.put(statName, GoatMath.skew(dataSet.getDataCols().get(statName))); //take off afterwards
             }
         }
     }
@@ -59,23 +58,25 @@ public abstract class GoatAnalyzer  {
         }
     }
 
-     static List<Double> reflectData(List<Double> list){
+     static void reflectData(List<Double> list){
         double pivot = Collections.max(list);
         for(int i = 0;  i < list.size() ; i++){
             list.set(i,  2 + pivot - list.get(i));
         }
-        return list;
+
     }
 
      void skewTest(){
 
         for (String statName : dataSet.getDataCols().keySet()){
             List<Double> statValues = dataSet.getDataCols().get(statName);
-            dataSkew.put(statName,GoatMath.skew(dataSet.getDataCols().get(statName)));
-            dataMaximums.put(statName,GoatMath.maximum(dataSet.getDataCols().get(statName)));
+            dataSkew.put(statName,GoatMath.skew(statValues));
+            dataMaximums.put(statName,GoatMath.maximum(statValues));
+
             if(!statName.equals(GoatStats.PERIOD)) {
+
                 if (dataSkew.get(statName) < -SKEW_LIMIT) {
-                    GoatAnalyzer.reflectData(statValues);
+                    GoatAnalyzer.reflectData(statValues); // does it change list
                     Opinion weighting = dataSet.getGoatOpinions().get(statName);
                     dataSet.getGoatOpinions().put(statName, weighting.reflect());
                     GoatMath.transform(statValues);
@@ -143,10 +144,12 @@ public abstract class GoatAnalyzer  {
             return mid;
         }
 
-        static double skew(List<Double> list){
+        static double skew( final List<Double> list){
             double sum = 0;
             double factor = 1/((list.size()-1)*(Math.pow(GoatMath.standardDeviation(list),3)));
+            //calculate mean once, double factor final
             for(double val: list){
+
                 sum += (val - mean(list))*(val - mean(list))*(val - mean(list));
             }
             return sum*factor;
@@ -186,7 +189,6 @@ public abstract class GoatAnalyzer  {
             }
             return max ;
         }
-
 
     }
 
