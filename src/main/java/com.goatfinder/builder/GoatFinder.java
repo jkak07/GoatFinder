@@ -13,7 +13,7 @@ import java.util.List;
         rankedData = goatRanker(analyzedData.dataSet.getDataRows());
     }
 
-    List<? extends IGoat> goatRanker(List<? extends IGoat> data){
+    static List<? extends IGoat> goatRanker(List<? extends IGoat> data){
         Comparator<IGoat> goatScore = (o1, o2) -> Double.compare(o2.getGoatStats().getGoatScore(),
                 o1.getGoatStats().getGoatScore());
         Collections.sort(data, goatScore);

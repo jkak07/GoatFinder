@@ -4,6 +4,9 @@ The methodology depends on input data and a series of stats which normalises it*
 package com.goatfinder.runner ;
 
 import com.goatfinder.builder.*;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,13 +32,16 @@ public class GoatRunner {
 
     public static void main(String[] args) {
 
-        String fileName = "C:\\Users\\jason\\IdeaProjects\\projectA\\Data\\nba2020.txt";
-        //String fileName = "C:\\Users\\jason\\IdeaProjects\\projectA\\Data\\TennisAllTime.csv";
+        ApplicationContext appContext = new AnnotationConfigApplicationContext(AppConfig.class);
 
-        IParser nbaData = GoatMaker.parseBasketBallData(fileName, setOpinionsBasketball());
-        GoatAnalyzer analysed = GoatMaker.BasketBallAnalyzer(nbaData);
-        IGoatDisplayer nbaResults = GoatMaker.goatResults(analysed);
-        nbaResults.displayGoats(20);
+
+        //String fileName = "C:\\Users\\jason\\IdeaProjects\\projectA\\Data\\nba2020.txt";
+        //IParser nbaData = GoatMaker.parseBasketBallData(fileName, setOpinionsBasketball());
+        //GoatAnalyzer analysed = GoatMaker.BasketBallAnalyzer(nbaData);
+        //IGoatDisplayer nbaResults = GoatMaker.goatResults(analysed);
+        //nbaResults.displayGoats(20);
+
+
 
     }
 
