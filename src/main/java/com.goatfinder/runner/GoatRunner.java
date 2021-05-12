@@ -4,6 +4,9 @@ The methodology depends on input data and a series of stats which normalises it*
 package com.goatfinder.runner ;
 
 import com.goatfinder.builder.*;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,13 +32,43 @@ public class GoatRunner {
 
     public static void main(String[] args) {
 
-        String fileName = "C:\\Users\\jason\\IdeaProjects\\projectA\\Data\\nba2020.txt";
-        //String fileName = "C:\\Users\\jason\\IdeaProjects\\projectA\\Data\\TennisAllTime.csv";
+        //App Config
+        /*ApplicationContext appContext = new AnnotationConfigApplicationContext(Config.class);
 
-        IParser nbaData = GoatMaker.parseBasketBallData(fileName, setOpinionsBasketball());
-        GoatAnalyzer analysed = GoatMaker.BasketBallAnalyzer(nbaData);
+        IParser parser = appContext.getBean("Parser", IParser.class);
+        System.out.println(parser.getDataRows().get(0)); //config runs the beans without me having to declare it;
+        GoatAnalyzer analyser = appContext.getBean("Analyser", GoatAnalyzer.class);
+
+        IGoatDisplayer results1 = appContext.getBean("Finder",IGoatDisplayer.class);
+        results1.displayGoats(30);
+        System.out.println(results1);
+
+        IGoatDisplayer results2 = appContext.getBean("Finder",IGoatDisplayer.class);
+        System.out.println(results2);*/
+
+        //Normal Instantiation
+        /*String fileName = "C:\\Users\\jason\\IdeaProjects\\projectA\\Data\\nba2020.txt";
+        IGoatFactory players = new GoatMaker();
+        IParser nba = new BasketballParser(fileName, setOpinionsBasketball(), players);
+        GoatAnalyzer analyse = new BasketballAnalyzer(nba);
+        IGoatDisplayer nbaResults = new GoatFinder(analyse);
+        nbaResults.displayGoats(20);/*
+
+        //GoatFactories
+        /*String fileName = "C:\\Users\\jason\\IdeaProjects\\projectA\\Data\\nba2020.txt";
+        IGoatFactory players = new GoatMaker();
+        IParser nbaData = GoatMaker.parseBasketBallData(fileName, setOpinionsBasketball(),players);
+        GoatAnalyzer analysed = GoatAnalyzer.BasketBallAnalyzer(nbaData);
         IGoatDisplayer nbaResults = GoatMaker.goatResults(analysed);
-        nbaResults.displayGoats(20);
+        nbaResults.displayGoats(20);*/
+
+
+        /*ApplicationContext appContext = new AnnotationConfigApplicationContext(AutoWireConfig.class);
+        IGoatDisplayer results1 = appContext.getBean("Finder",IGoatDisplayer.class);
+        results1.displayGoats(20);
+        */
+
+
 
     }
 

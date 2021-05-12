@@ -12,6 +12,8 @@ import java.util.List;
      public TennisAnalyzer(IParser fileData) {
         super(fileData);
      }
+     public static GoatAnalyzer tennisAnalyzer(IParser dataSet){
+         return new TennisAnalyzer(dataSet);}
 
     public void goatCalculator() {
         for (IGoat player : dataSet.getDataRows()) {
@@ -39,9 +41,6 @@ import java.util.List;
                         count --;
                     }
                     scoreBuilder = scoreBuilder + (count*SPECIAL_STAT_COUNT_POINTS*dataSet.getGoatOpinions().get(statName).getRating());
-
-
-
 
 
                 }
