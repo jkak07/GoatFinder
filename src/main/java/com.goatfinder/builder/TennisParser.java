@@ -10,14 +10,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-class TennisParser {
+public class TennisParser {
 
     final private String fileName;
     final private Map<String, List<Double>> dataCols;
     final private List<TennisPlayer> dataRows;
     final private Map<String,Opinion> goatFields;
 
-    TennisParser(final String filename,  Map<String,Opinion> userOpinion){
+    public TennisParser(final String filename,  Map<String,Opinion> userOpinion){
         this.fileName = filename;
         goatFields = userOpinion;
         dataCols = new HashMap<>();

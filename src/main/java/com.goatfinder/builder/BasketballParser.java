@@ -1,4 +1,8 @@
 package com.goatfinder.builder ;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -6,21 +10,43 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
-class BasketballParser implements IParser{
+@Component("Parser")
+public class  BasketballParser implements IParser{
 
     final private String fileName;
     final private Map<String, List<Double>> dataCols;
     final private List<IGoat> dataRows; //Have a generic problem
     final private Map<String,Opinion> goatFields;
+    private IGoatFactory iGoatFactory;
 
-    BasketballParser(final String filename, Map<String,Opinion> userOpinion ){
+
+    public BasketballParser(final String filename, Map<String,Opinion> userOpinion ){
         this.fileName = filename;
         goatFields = userOpinion;
         dataCols = new HashMap<>();
         dataRows = new ArrayList<>();
-        read();
+        System.out.println("1st constructor");
 
+    }
+    //
+    @Autowired
+    public BasketballParser(final String filename, Map<String,Opinion> userOpinion, IGoatFactory goatFactory){
+        this.fileName = filename;
+        goatFields = userOpinion;
+        dataCols = new HashMap<>();
+        dataRows = new ArrayList<>();
+        this.iGoatFactory = goatFactory;
+        read();
+        System.out.println("2nd constructor");
+    }
+
+
+    @PostConstruct
+    private void initialise(){
+        System.out.println(getClass().getName() + " constructed");
     }
 
 
@@ -47,12 +73,12 @@ class BasketballParser implements IParser{
             while ((line = reader.readLine()) != null) {
                 String[] playerInfo= line.split(",");
 
-                IGoat nbaPlayer = GoatMaker.createBasketballPlayer(playerInfo, goatFields, colNames, dataCols);
+                //IGoat nbaPlayer = GoatMaker.createBasketballPlayer(playerInfo, goatFields, colNames, dataCols);
+                IGoat nbaPlayer = iGoatFactory.createBasketballPlayer1(playerInfo, goatFields, colNames, dataCols);
 
                 if(!dataRows.contains(nbaPlayer)){
                     dataRows.add(nbaPlayer);
                 }
-
             }
             reader.close();
         }

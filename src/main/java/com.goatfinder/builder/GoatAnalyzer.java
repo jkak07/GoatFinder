@@ -18,7 +18,7 @@ public abstract class GoatAnalyzer  {
     protected Map<String,Boolean> skewTestResults;
 
 
-    GoatAnalyzer(IParser fileData) {
+    public GoatAnalyzer(IParser fileData) {
         dataSet = fileData;
         dataMeans = new HashMap<>();
         dataMedian = new HashMap<>();
@@ -217,7 +217,7 @@ public abstract class GoatAnalyzer  {
         return skewTestResults;
     }
 
-    IParser getDataSet(){return dataSet;}
+    public IParser getDataSet(){return dataSet;} //for spring testing
 
 
 }

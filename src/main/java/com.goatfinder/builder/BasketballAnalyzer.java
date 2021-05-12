@@ -1,16 +1,32 @@
 package com.goatfinder.builder ;
 
- class BasketballAnalyzer extends GoatAnalyzer {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
+
+@Component("Goat")
+ public class BasketballAnalyzer extends GoatAnalyzer {
 
      private static final int MINIMUM_POPULATION_SAMPLE_SIZE = 30;
 
-     BasketballAnalyzer(IParser fileData) {
+
+    public BasketballAnalyzer(IParser fileData) {
         super(fileData);
         this.skewTest();
         this.getDataMeasures();
         this.goatCalculator();
 
     }
+
+    @PostConstruct
+    private void initialise(){
+        System.out.println(getClass().getName() + " constructed");
+    }
+
+
+    public static GoatAnalyzer BasketBallAnalyzer(IParser dataSet){
+        return new BasketballAnalyzer(dataSet);}
 
      void goatCalculator() {
 
