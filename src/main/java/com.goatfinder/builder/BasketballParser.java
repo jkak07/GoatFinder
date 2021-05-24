@@ -1,8 +1,5 @@
 package com.goatfinder.builder ;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -10,10 +7,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.function.Function;
-import java.util.function.Supplier;
 
-@Component("Parser")
+//@Component("Parser")
 public class  BasketballParser implements IParser{
 
     final private String fileName;
@@ -28,23 +23,24 @@ public class  BasketballParser implements IParser{
         goatFields = userOpinion;
         dataCols = new HashMap<>();
         dataRows = new ArrayList<>();
-        System.out.println("1st constructor");
+        System.out.println("1st BasketBall Parser constructor");
 
     }
     //
-    @Autowired
-    public BasketballParser(final String filename, Map<String,Opinion> userOpinion, IGoatFactory goatFactory){
+    //@Autowired
+    public BasketballParser(final String filename, Map<String, Opinion> userOpinion, IGoatFactory goatFactory){
         this.fileName = filename;
         goatFields = userOpinion;
         dataCols = new HashMap<>();
         dataRows = new ArrayList<>();
         this.iGoatFactory = goatFactory;
         read();
-        System.out.println("2nd constructor");
+        System.out.println("2nd BasketBall Parser constructor");
     }
 
 
-    @PostConstruct
+
+    // @PostConstruct
     private void initialise(){
         System.out.println(getClass().getName() + " constructed");
     }

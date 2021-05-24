@@ -1,4 +1,6 @@
+
 package com.goatfinder.builder;
+
 import org.junit.jupiter.api.*;
 import org.mockito.MockitoAnnotations;
 
@@ -8,6 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ParseNBATests {
+    /*
 
    private String fileName;
    private Map<String, Opinion> opinion;
@@ -62,5 +65,5 @@ public class ParseNBATests {
                 ()-> Assertions.assertEquals(Opinion.STRONG_POSITIVE, parser.getGoatOpinions().get("PTS"))
         );
     }
-
+*/
 }

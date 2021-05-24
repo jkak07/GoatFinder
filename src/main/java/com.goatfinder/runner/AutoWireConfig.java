@@ -1,4 +1,4 @@
-package com.goatfinder.runner;
+/*package com.goatfinder.runner;
 
 import com.goatfinder.builder.*;
 import org.springframework.beans.factory.config.BeanDefinition;
@@ -24,3 +24,4 @@ public class AutoWireConfig {
 
 
 }
+*/
