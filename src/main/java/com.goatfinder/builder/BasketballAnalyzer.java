@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 
-@Component("Goat")
+//@Component("Goat")
  public class BasketballAnalyzer extends GoatAnalyzer {
 
      private static final int MINIMUM_POPULATION_SAMPLE_SIZE = 30;
@@ -19,7 +19,7 @@ import javax.annotation.PostConstruct;
 
     }
 
-    @PostConstruct
+   // @PostConstruct
     private void initialise(){
         System.out.println(getClass().getName() + " constructed");
     }

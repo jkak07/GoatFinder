@@ -1,3 +1,4 @@
+/*
 package com.goatfinder.runner;
 
 import com.goatfinder.builder.*;
@@ -39,3 +40,4 @@ public class Config {
         return new GoatFinder(getGoatAnalyzer());
     }
 }
+*/

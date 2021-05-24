@@ -6,6 +6,7 @@ package com.goatfinder.runner ;
 import com.goatfinder.builder.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,37 +15,24 @@ import java.util.Map;
 public class GoatRunner {
 
     public static Map<String, Opinion> setOpinionsBasketball(){
-        Map<String, Opinion> opinion = new HashMap<>();
+        Map<String, Opinion> opinions = new HashMap<>();
 
-        opinion.put("3P%", Opinion.LOW_POSITIVE);
-        opinion.put("FTA", Opinion.LOW_POSITIVE);
-        opinion.put("TRB", Opinion.STRONG_POSITIVE);
-        opinion.put("AST", Opinion.STRONG_POSITIVE);
-        opinion.put("STL", Opinion.STRONG_POSITIVE);
-        opinion.put("BLK", Opinion.LOW_POSITIVE);
-        opinion.put("TOV", Opinion.MEDIUM_NEGATIVE);
-        opinion.put("PF", Opinion.LOW_NEGATIVE);
-        opinion.put("PTS", Opinion.STRONG_POSITIVE);
+        opinions.put("3P%", Opinion.LOW_POSITIVE);
+        opinions.put("FTA", Opinion.LOW_POSITIVE);
+        opinions.put("TRB", Opinion.STRONG_POSITIVE);
+        opinions.put("AST", Opinion.STRONG_POSITIVE);
+        opinions.put("STL", Opinion.STRONG_POSITIVE);
+        opinions.put("BLK", Opinion.LOW_POSITIVE);
+        opinions.put("TOV", Opinion.MEDIUM_NEGATIVE);
+        opinions.put("PF", Opinion.LOW_NEGATIVE);
+        opinions.put("PTS", Opinion.STRONG_POSITIVE);
 
-        return opinion;
+        return opinions;
 }
 
 
     public static void main(String[] args) {
 
-        //App Config
-        /*ApplicationContext appContext = new AnnotationConfigApplicationContext(Config.class);
-
-        IParser parser = appContext.getBean("Parser", IParser.class);
-        System.out.println(parser.getDataRows().get(0)); //config runs the beans without me having to declare it;
-        GoatAnalyzer analyser = appContext.getBean("Analyser", GoatAnalyzer.class);
-
-        IGoatDisplayer results1 = appContext.getBean("Finder",IGoatDisplayer.class);
-        results1.displayGoats(30);
-        System.out.println(results1);
-
-        IGoatDisplayer results2 = appContext.getBean("Finder",IGoatDisplayer.class);
-        System.out.println(results2);*/
 
         //Normal Instantiation
         /*String fileName = "C:\\Users\\jason\\IdeaProjects\\projectA\\Data\\nba2020.txt";
@@ -62,13 +50,15 @@ public class GoatRunner {
         IGoatDisplayer nbaResults = GoatMaker.goatResults(analysed);
         nbaResults.displayGoats(20);*/
 
+        /*ApplicationContext appContext = new ClassPathXmlApplicationContext("applicationContext2.xml");
 
-        /*ApplicationContext appContext = new AnnotationConfigApplicationContext(AutoWireConfig.class);
-        IGoatDisplayer results1 = appContext.getBean("Finder",IGoatDisplayer.class);
-        results1.displayGoats(20);
-        */
+        GoatFinder nbaResults = appContext.getBean("Finder", GoatFinder.class);
+        nbaResults.displayGoats(20);*/
 
+        ApplicationContext appContext = new ClassPathXmlApplicationContext("applicationContext2.xml");
 
+        GoatFinder nbaResults = appContext.getBean("Finder", GoatFinder.class);
+        nbaResults.displayGoats(20);
 
     }
 

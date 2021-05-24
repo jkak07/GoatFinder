@@ -12,6 +12,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 import static org.mockito.Mockito.when;
 
 public class testTest {
+    /*
 
     @Mock
     private IParser parserMock;
@@ -38,5 +39,5 @@ public class testTest {
 
 
     }
-
+*/
 }

@@ -7,7 +7,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-@Component("Finder")
+//@Component("Finder")
 public class GoatFinder implements IGoatDisplayer {
 
     static final int BASE_VALUE = 100;
@@ -29,7 +29,7 @@ public class GoatFinder implements IGoatDisplayer {
         return data;
     }
 
-    @PostConstruct //good for logging and classes constructed after some setters are used
+   // @PostConstruct //good for logging and classes constructed after some setters are used
     private void initialise(){
         System.out.println(getClass().getName() + " constructed");
     }

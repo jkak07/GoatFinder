@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
+
+    <bean name="Goat"
+          class="com.goatfinder.builder.GoatMaker"/>
+
+
+    <util:map id="opinion" map-class="java.util.HashMap" key-type="java.lang.String" value-type="com.goatfinder.builder.Opinion">
+        <entry key="3P%" value="LOW_POSITIVE"/>
+        <entry key="FTA" value="LOW_POSITIVE"/>
+        <entry key="TRB" value="STRONG_POSITIVE"/>
+        <entry key="AST" value="STRONG_POSITIVE"/>
+        <entry key="STL" value="STRONG_POSITIVE"/>
+        <entry key="BLK" value="LOW_POSITIVE"/>
+        <entry key="TOV" value ="MEDIUM_NEGATIVE"/>
+        <entry key="PF"  value ="LOW_NEGATIVE"/>
+        <entry key="PTS" value ="STRONG_POSITIVE"/>
+    </util:map>
+
+    <bean name="Parser" class="com.goatfinder.builder.BasketballParser">
+        <constructor-arg index="0" value="C:\\Users\\jason\\IdeaProjects\\projectA\\Data\\nba2020.txt"/>
+        <constructor-arg index="1" ref="opinion"/>
+        <constructor-arg index="2" ref="Goat"/>
+    </bean>
+
+    <bean name="Analyser" class="com.goatfinder.builder.BasketballAnalyzer" autowire="constructor"/>
+
+    <bean name="Finder" class="com.goatfinder.builder.GoatFinder" autowire="constructor"/>
+
+    <!-- Setter injection way, can use byType/byName for auto-wiring-->
+    <!--
+       <bean name="Goat"
+             class="com.goatfinder.builder.GoatMaker"/>
+
+       <bean name="Opinions"
+             class="com.goatfinder.runner.UserOpinions"/>
+
+
+       <bean name="Parser" class="com.goatfinder.builder.BasketballParser">
+           <property name="filename" value="C:\\Users\\jason\\IdeaProjects\\projectA\\Data\\nba2020.txt"/>
+           <property name="opinion"  ref="Opinions"/>
+           <property name="goatMaker" ref="Goat"/>
+       </bean>
+
+       <bean name="Analyser" class="com.goatfinder.builder.BasketballAnalyzer" >
+           <property name="parser" ref="Parser"/>
+       </bean>
+
+       <bean name="Finder" class="com.goatfinder.builder.GoatFinder" >
+           <property name="finder" ref="Analyser"/>
+       </bean>
+    -->
+
+</beans>
+
