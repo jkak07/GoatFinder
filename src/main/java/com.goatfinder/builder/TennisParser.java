@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class TennisParser {
+public class TennisParser implements IParser{
 
     final private String fileName;
     final private Map<String, List<Double>> dataCols;
@@ -47,15 +47,19 @@ public class TennisParser {
                     switch(colName){
                         case "name":
                              tennisBuilder.name((playerInfo[i]));
+
                             break;
                         case "country_name":
                             tennisBuilder.country(playerInfo[i]);
+
                             break;
                         case "dob":
-                            tennisBuilder.age(parseAge(playerInfo[i]));
+                           tennisBuilder.age(parseAge(playerInfo[i]));
+
                             break;
                         case "active":
                             tennisBuilder.active(Boolean.valueOf(playerInfo[i]));
+
                             break;
                         case "wonLost":
                             playerStats.setPeriod((double)parsePeriod(playerInfo[i]));
@@ -66,6 +70,7 @@ public class TennisParser {
                     storeChosenFields(colNames[i],playerInfo[i],playerStats);
                 }
                 final TennisPlayer atpPlayer = tennisBuilder.stats(playerStats).build();
+
                 if(!dataRows.contains(atpPlayer)){
                     dataRows.add(atpPlayer);
                 }
@@ -77,21 +82,21 @@ public class TennisParser {
         }
     }
 
-    int parseAge(String dateOfBirth){
+    static int parseAge(String dateOfBirth){
         LocalDate dob = LocalDate.parse(dateOfBirth);
         Period p = Period.between(dob, LocalDate.now());
     return p.getYears();
     }
 
-     int parsePeriod(String gamesPlayed){
+    int parsePeriod(String gamesPlayed) {
         return parseGamesWon(gamesPlayed) + parseGamesLost(gamesPlayed);
     }
 
-     int parseGamesWon(String gamesWon){
-        return Integer.parseInt(gamesWon.substring(0,gamesWon.indexOf('-')));
+    static int parseGamesWon(String gamesWon) {
+        return Integer.parseInt(gamesWon.substring(0, gamesWon.indexOf('-')));
     }
 
-     int parseGamesLost(String gamesLost){
+     static int parseGamesLost(String gamesLost){
         return Integer.parseInt(gamesLost.substring(gamesLost.indexOf('-') +1));
     }
 
@@ -103,15 +108,15 @@ public class TennisParser {
         }
     }
 
-     Map<String,List<Double>> getDataCols(){
+     public Map<String,List<Double>> getDataCols(){
         return this.dataCols;
     }
 
-     List<TennisPlayer> getDataRows(){
+     public List<TennisPlayer> getDataRows(){
         return this.dataRows;
     }
 
-     Map<String,Opinion> getGoatOpinions(){
+     public Map<String,Opinion> getGoatOpinions(){
         return this.goatFields;
     }
 

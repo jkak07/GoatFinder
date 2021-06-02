@@ -15,40 +15,24 @@ public class  BasketballParser implements IParser{
     final private Map<String, List<Double>> dataCols;
     final private List<IGoat> dataRows; //Have a generic problem
     final private Map<String,Opinion> goatFields;
-    private IGoatFactory iGoatFactory;
+    private IGoatMaker iGoatFactory;
 
 
-    public BasketballParser(final String filename, Map<String,Opinion> userOpinion ){
-        this.fileName = filename;
-        goatFields = userOpinion;
-        dataCols = new HashMap<>();
-        dataRows = new ArrayList<>();
-        System.out.println("1st BasketBall Parser constructor");
 
-    }
     //
     //@Autowired
-    public BasketballParser(final String filename, Map<String, Opinion> userOpinion, IGoatFactory goatFactory){
+    public BasketballParser(final String filename, Map<String, Opinion> userOpinion, IGoatMaker goatFactory){
         this.fileName = filename;
         goatFields = userOpinion;
         dataCols = new HashMap<>();
         dataRows = new ArrayList<>();
         this.iGoatFactory = goatFactory;
         read();
-        System.out.println("2nd BasketBall Parser constructor");
+
     }
 
 
 
-    // @PostConstruct
-    private void initialise(){
-        System.out.println(getClass().getName() + " constructed");
-    }
-
-
-    public static IParser ParseBasketballData(final String filename, Map<String,Opinion> userOpinion){
-        return new BasketballParser(filename,userOpinion);
-    }
 
     public static String parseName(String name){
         String parsedName = null;

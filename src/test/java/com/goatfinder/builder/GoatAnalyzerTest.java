@@ -1,8 +1,9 @@
-/*package com.goatfinder.builder ;
+package com.goatfinder.builder ;
 
 import org.junit.jupiter.api.*;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.junit.jupiter.api.Test;
 
@@ -29,9 +30,6 @@ public class GoatAnalyzerTest {
     @Test
     public void testDatasetUp() {
 
-
-
-
         opinion = new HashMap<>();
         opinion.put("G", Opinion.MEDIUM_POSITIVE);
         opinion.put("TOV", Opinion.MEDIUM_NEGATIVE);
@@ -39,46 +37,63 @@ public class GoatAnalyzerTest {
         opinion.put("DUMMY", Opinion.STRONG_POSITIVE);
         opinion.put("FAKE", Opinion.STRONG_POSITIVE);
 
-        fileName = "C:\\Users\\jason\\IdeaProjects\\projectA\\Data\\nba2021test.txt";
+        fileName = "data/nba2021test.txt";
+        IGoatMaker goatMakerSpy = Mockito.spy(GoatMaker.class);
 
-        parser = new BasketballParser(fileName, opinion);
+        parser = new BasketballParser(fileName, opinion, goatMakerSpy);
         analyse = new BasketballAnalyzer(parser);
+
 
         list = new ArrayList<>();
         list.add(2.0);list.add(3.0); list.add(88.0);list.add(14.0);
 
-
-
-
     }
 
     @Test
+    @DisplayName("Test Mean")
     public void testMean(){
 
-
-
-        Assertions.assertEquals( 26.75,analyse.getDataMeans().get("FAKE"));
+        Assertions.assertEquals( 4.067188319090693,analyse.getDataMeans().get("FAKE"));
 
     }
+
     @Test
+    @DisplayName("Test Standard Deviation")
     public void testStandardDeviation(){
-        Assertions.assertEquals( 41.19364837771312,analyse.getDataStandardDeviations().get("FAKE"));
+        Assertions.assertEquals( 3.689259939708274,analyse.getDataStandardDeviations().get("FAKE"));
 
     }
 
     @Test
+    @DisplayName("Test Median Data")
     public void testDataMedian(){
 
-        Assertions.assertEquals(8.5,analyse.getDataMedian().get("FAKE") );
+        analyse.getDataMedian();
+        Assertions.assertEquals(2.7368540971714093,analyse.getDataMedian().get("FAKE") );
     }
 
     @Test
+    @DisplayName("Test Median")
+    public void testMedian(){
+        Assertions.assertEquals(8.5, GoatAnalyzer.GoatMath.median(list));
+    }
+
+    @Test
+    @DisplayName("Test Z normaliser")
+    public void testNormaliser(){
+        Assertions.assertEquals(4, GoatAnalyzer.normalize(15, 3, 3));
+    }
+
+    @Test
+    @DisplayName("Check Period Range")
     public void testPeriodRange(){
-        Assertions.assertEquals(17,analyse.getPeriodRange());
+        Assertions.assertAll(() -> Assertions.assertEquals(1,analyse.periodMultiplier(analyse.dataSet.getDataRows().get(0))));
 
 
     }
+
     @Test
+    @DisplayName("Check Skew Test accuracy")
     public void testDataSkew(){
         Assertions.assertAll(() -> Assertions.assertEquals(0.9496752023249946, analyse.getDataSkew().get("FAKE")),
                 () -> Assertions.assertEquals(-0.8906732563233373, analyse.getDataSkew().get("DUMMY")),
@@ -86,14 +101,25 @@ public class GoatAnalyzerTest {
     }
 
     @Test
+    @DisplayName("Test reflection mechanism")
     public void testReflection(){
 
         List<Double> copy = new ArrayList<>(list);
-        //Assertions.assertNotEquals(copy ,GoatAnalyzer.reflectData(list));
+        GoatAnalyzer.reflectData(list);
+        Assertions.assertNotEquals(copy ,list);
 
     }
 
     @Test
+    @DisplayName("Period multiplier")
+    public void testPeriodMultiplier(){
+
+        Assertions.assertEquals(17,analyse.getPeriodRange());
+
+    }
+
+    @Test
+    @DisplayName("Check Skew logic")
     public void skewTest(){
         Assertions.assertAll(() -> Assertions.assertTrue(analyse.getSkewTestResults().get("FAKE")),
                 () -> Assertions.assertTrue(analyse.getSkewTestResults().get("DUMMY")),
@@ -112,7 +138,6 @@ public class GoatAnalyzerTest {
     }
 
     @Test
-
     @DisplayName("Check if Row data has been updated")
     public void updatedRowData(){
         analyse.skewDataUpdateRows();
@@ -124,4 +149,3 @@ public class GoatAnalyzerTest {
 
 
 }
-*/
