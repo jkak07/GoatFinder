@@ -30,9 +30,9 @@ public class GoatFinder implements IGoatDisplayer {
     }
 
    // @PostConstruct //good for logging and classes constructed after some setters are used
-    private void initialise(){
+   /* private void initialise(){
         System.out.println(getClass().getName() + " constructed");
-    }
+    }*/
 
     void goatScoreFormatter(){
         double max = rankedData.get(0).getGoatStats().getGoatScore();
@@ -45,7 +45,7 @@ public class GoatFinder implements IGoatDisplayer {
 
     public void displayGoats(int topXPlayers) {
         this.goatScoreFormatter();
-        rankedData.get(0).goatCase();
+        System.out.println(rankedData.get(0).goatCase());
         rankedData.stream()
                 .limit(topXPlayers)
                 .forEach((player)-> System.out.println(player));

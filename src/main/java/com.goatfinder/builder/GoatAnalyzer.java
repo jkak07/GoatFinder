@@ -29,15 +29,16 @@ public abstract class GoatAnalyzer  {
         periodRange = GoatMath.range(dataSet.getDataCols().get(GoatStats.PERIOD));
     }
 
-    public static GoatAnalyzer BasketBallAnalyzer(IParser dataSet){
+    /*public static GoatAnalyzer BasketBallAnalyzer(IParser dataSet){
         return new BasketballAnalyzer(dataSet);
-    }
+    }*/
 
      void getDataMeasures(){
         for (String statName : dataSet.getDataCols().keySet()){
             if(!statName.equals(GoatStats.PERIOD)) {
                 dataMeans.put(statName, GoatMath.mean(dataSet.getDataCols().get(statName)));
                 dataStandardDeviations.put(statName, GoatMath.standardDeviation(dataSet.getDataCols().get(statName)));
+                dataMedian.put(statName, GoatMath.median(dataSet.getDataCols().get(statName)));
                 dataMaximums.put(statName, GoatMath.maximum(dataSet.getDataCols().get(statName)));
             }
         }
@@ -112,7 +113,7 @@ public abstract class GoatAnalyzer  {
     }
 
 
-    private static class GoatMath {
+    static class GoatMath {
 
         static double mean(List<Double> list) {
             double sum = 0;
