@@ -367,7 +367,7 @@ rank,name,country_name,active,dob,grandSlams,tourFinals,altFinals,masters,olympi
 364,David Prinosil,Germany,false,1973-03-09,0,0,0,0,0,3,0,169-221,43.3%
 364,Javier Frana,Argentina,false,1966-12-25,0,0,0,0,0,3,0,163-158,50.8%
 364,Joao Sousa,Portugal,true,1989-03-30,0,0,0,0,0,3,0,196-229,46.1%
-364,Mario Martinez,"Bolivia, Plurinational State of",false,1961-09-12,0,0,0,0,0,3,0,90-79,53.3%
+364,Mario Martinez,"Bolivia Plurinational State of",false,1961-09-12,0,0,0,0,0,3,0,90-79,53.3%
 364,Mike Bauer,United States,false,1959-06-29,0,0,0,0,0,3,0,75-91,45.2%
 364,Paolo Cane,Italy,false,1965-04-09,0,0,0,0,0,3,0,136-131,50.9%
 364,Pedro Rebolledo,Chile,false,1960-12-17,0,0,0,0,0,3,0,111-114,49.3%
@@ -442,7 +442,7 @@ rank,name,country_name,active,dob,grandSlams,tourFinals,altFinals,masters,olympi
 417,Martin Sinner,Germany,false,1968-02-07,0,0,0,0,0,2,0,50-78,39.1%
 417,Mike Estep,United States,false,1949-07-19,0,0,0,0,0,2,0,112-178,38.6%
 417,Milan Holecek,Czech Republic,false,1943-10-23,0,0,0,0,0,2,0,114-157,42.1%
-417,Nicolas Pereira,"Venezuela, Bolivarian Republic of",false,1970-09-29,0,0,0,0,0,2,0,84-130,39.3%
+417,Nicolas Pereira,"Venezuela Bolivarian Republic of",false,1970-09-29,0,0,0,0,0,2,0,84-130,39.3%
 417,Olivier Rochus,Belgium,false,1981-01-18,0,0,0,0,0,2,0,238-276,46.3%
 417,Patrick Baur,Germany,false,1965-05-03,0,0,0,0,0,2,0,67-107,38.5%
 417,Rajeev Ram,United States,false,1984-03-18,0,0,0,0,0,2,0,57-93,38.0%
@@ -497,7 +497,7 @@ rank,name,country_name,active,dob,grandSlams,tourFinals,altFinals,masters,olympi
 417,Francisco Maciel,Mexico,false,1964-07-01,0,0,0,0,0,0,0,50-57,46.7%
 417,Harel Levy,Israel,false,1978-08-05,0,0,0,0,0,0,0,63-99,38.9%
 417,Henrik Holm,Sweden,false,1968-08-22,0,0,0,0,0,0,0,96-110,46.6%
-417,Hyeon Chung,"Korea, Republic of",true,1996-05-19,0,0,0,0,0,0,0,79-69,53.4%
+417,Hyeon Chung,"Korea Republic of",true,1996-05-19,0,0,0,0,0,0,0,79-69,53.4%
 417,Jim Osborne,United States,false,1945-02-01,0,0,0,0,0,0,0,97-112,46.4%
 417,Leif Shiras,United States,false,1959-08-21,0,0,0,0,0,0,0,71-103,40.8%
 417,Patrik Kuhnen,Germany,false,1966-02-11,0,0,0,0,0,0,0,127-153,45.4%
@@ -537,7 +537,7 @@ rank,name,country_name,active,dob,grandSlams,tourFinals,altFinals,masters,olympi
 507,Hans Kary,Austria,false,1949-02-23,0,0,0,0,0,1,0,166-229,42.0%
 507,Hernan Gumy,Argentina,false,1972-03-05,0,0,0,0,0,1,0,115-128,47.3%
 507,Howard Schoenfield,United States,false,1957-11-15,0,0,0,0,0,1,0,11-42,20.8%
-507,Hyung Taik Lee,"Korea, Republic of",false,1976-01-03,0,0,0,0,0,1,0,161-164,49.5%
+507,Hyung Taik Lee,"Korea Republic of",false,1976-01-03,0,0,0,0,0,1,0,161-164,49.5%
 507,Igor Kunitsyn,Russian Federation,false,1981-09-30,0,0,0,0,0,1,0,89-153,36.8%
 507,Ivan Dodig,Croatia,false,1985-01-02,0,0,0,0,0,1,0,118-140,45.7%
 507,Jan Leschly,Denmark,false,1940-09-11,0,0,0,0,0,1,0,52-34,60.5%
@@ -586,7 +586,7 @@ rank,name,country_name,active,dob,grandSlams,tourFinals,altFinals,masters,olympi
 507,Peter Gojowczyk,Germany,true,1989-07-15,0,0,0,0,0,1,0,62-76,44.9%
 507,Peter Wessels,Netherlands,false,1978-05-07,0,0,0,0,0,1,0,45-60,42.9%
 507,Pieter Aldrich,South Africa,false,1965-09-07,0,0,0,0,0,1,0,36-40,47.4%
-507,Radu Albot,"Moldova, Republic of",true,1989-11-11,0,0,0,0,0,1,0,85-109,43.8%
+507,Radu Albot,"Moldova Republic of",true,1989-11-11,0,0,0,0,0,1,0,85-109,43.8%
 507,Ramanathan Krishnan,India,false,1937-04-11,0,0,0,0,0,1,0,22-13,62.9%
 507,Ricardo Mello,Brazil,false,1980-12-21,0,0,0,0,0,1,0,60-94,39.0%
 507,Richard Meyer,United States,false,1955-09-04,0,0,0,0,0,1,0,42-77,35.3%
@@ -652,4 +652,4 @@ rank,name,country_name,active,dob,grandSlams,tourFinals,altFinals,masters,olympi
 507,Stanislav Birner,Czech Republic,false,1956-10-11,0,0,0,0,0,0,0,63-121,34.2%
 507,Todd Witsken,United States,false,1963-11-04,0,0,0,0,0,0,0,115-135,46.0%
 507,Wanaro Ngodrella,France,false,1949-10-19,0,0,0,0,0,0,0,45-75,37.5%
-507,Yen Hsun Lu,"Taiwan, Province of China",true,1983-08-14,0,0,0,0,0,0,0,162-227,41.6%
+507,Yen Hsun Lu,"Taiwan Province of China",true,1983-08-14,0,0,0,0,0,0,0,162-227,41.6%

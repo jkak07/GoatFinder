@@ -19,14 +19,10 @@ import javax.annotation.PostConstruct;
 
     }
 
-   // @PostConstruct
-    private void initialise(){
-        System.out.println(getClass().getName() + " constructed");
-    }
 
 
-    public static GoatAnalyzer BasketBallAnalyzer(IParser dataSet){
-        return new BasketballAnalyzer(dataSet);}
+    /*public static GoatAnalyzer BasketBallAnalyzer(IParser dataSet){
+        return new BasketballAnalyzer(dataSet);}*/
 
      void goatCalculator() {
 

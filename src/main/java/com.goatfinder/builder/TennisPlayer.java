@@ -14,11 +14,11 @@ package com.goatfinder.builder;
     }*/
 
 
-    public void goatCase(){
+    public String goatCase(){
         String proof = "My name is " + this.name + " and I play a game suited for gentlemen.\n" +
                 "I get to travel the world and dismantle opponents with with hand-eye coordination.\n" +
                 "They say I am the 'GOAT' and I wouldn't dare disagree. \n";
-        System.out.println(proof + "\n\n" + "Goat Report");
+        return proof + "\n\n" + "Goat Report";
 
     }
 
@@ -52,13 +52,12 @@ package com.goatfinder.builder;
     }
 
     private TennisPlayer(Builder builder){
-        name = builder.name;
-        age = builder.age;
-        playerStats = builder.playerStats;
-        country = builder.country;
-        active = builder.active;
+        this.name = builder.name;
+        this.age = builder.age;
+        this.playerStats = builder.playerStats;
+        this.country = builder.country;
+        this.active = builder.active;
     }
-
 
 
 }

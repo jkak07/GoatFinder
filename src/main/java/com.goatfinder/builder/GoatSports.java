@@ -7,7 +7,6 @@ import java.util.Objects;
     protected int age;
     protected GoatStats playerStats;
 
-    public String getName(){ return name;}
 
     public String toString(){
         return this.name + "'s Goatness is: " + this.playerStats.getGoatScore();
@@ -24,7 +23,7 @@ import java.util.Objects;
         if(this.getClass() != op.getClass())
             return false;
 
-        BasketballPlayer otherPlayer = (BasketballPlayer) op;
+        GoatSports otherPlayer = (GoatSports) op;
 
         return this.name.equals(otherPlayer.name) && this.age == otherPlayer.age;
     }

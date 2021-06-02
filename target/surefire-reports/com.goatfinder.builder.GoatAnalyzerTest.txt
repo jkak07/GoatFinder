@@ -1,0 +1,43 @@
+-------------------------------------------------------------------------------
+Test set: com.goatfinder.builder.GoatAnalyzerTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 0.019 sec <<< FAILURE!
+com.goatfinder.builder.GoatAnalyzerTest.testMean()  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "com.goatfinder.builder.GoatAnalyzer.getDataMeans()" because "this.analyse" is null
+	at com.goatfinder.builder.GoatAnalyzerTest.testMean(GoatAnalyzerTest.java:51)
+
+com.goatfinder.builder.GoatAnalyzerTest.testDataMedian()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "com.goatfinder.builder.GoatAnalyzer.getDataMedian()" because "this.analyse" is null
+	at com.goatfinder.builder.GoatAnalyzerTest.testDataMedian(GoatAnalyzerTest.java:63)
+
+com.goatfinder.builder.GoatAnalyzerTest.testReflection()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "java.util.Collection.toArray()" because "c" is null
+	at java.base/java.util.ArrayList.<init>(ArrayList.java:181)
+	at com.goatfinder.builder.GoatAnalyzerTest.testReflection(GoatAnalyzerTest.java:83)
+
+com.goatfinder.builder.GoatAnalyzerTest.testDataSkew()  Time elapsed: 0.01 sec  <<< FAILURE!
+org.opentest4j.MultipleFailuresError: Multiple Failures (3 failures)
+	java.lang.NullPointerException: Cannot invoke "com.goatfinder.builder.GoatAnalyzer.getDataSkew()" because "this.analyse" is null
+	java.lang.NullPointerException: Cannot invoke "com.goatfinder.builder.GoatAnalyzer.getDataSkew()" because "this.analyse" is null
+	java.lang.NullPointerException: Cannot invoke "com.goatfinder.builder.GoatAnalyzer.getDataSkew()" because "this.analyse" is null
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:38)
+	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2895)
+	at com.goatfinder.builder.GoatAnalyzerTest.testDataSkew(GoatAnalyzerTest.java:75)
+
+com.goatfinder.builder.GoatAnalyzerTest.testDatasetUp()  Time elapsed: 0.004 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "java.util.List.get(int)" because "list" is null
+	at com.goatfinder.builder.GoatAnalyzer$GoatMath.range(GoatAnalyzer.java:168)
+	at com.goatfinder.builder.GoatAnalyzer.<init>(GoatAnalyzer.java:29)
+	at com.goatfinder.builder.BasketballAnalyzer.<init>(BasketballAnalyzer.java:15)
+	at com.goatfinder.builder.GoatAnalyzerTest.testDatasetUp(GoatAnalyzerTest.java:42)
+
+com.goatfinder.builder.GoatAnalyzerTest.testPeriodRange()  Time elapsed: 0.002 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "com.goatfinder.builder.GoatAnalyzer.getPeriodRange()" because "this.analyse" is null
+	at com.goatfinder.builder.GoatAnalyzerTest.testPeriodRange(GoatAnalyzerTest.java:68)
+
+com.goatfinder.builder.GoatAnalyzerTest.testStandardDeviation()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "com.goatfinder.builder.GoatAnalyzer.getDataStandardDeviations()" because "this.analyse" is null
+	at com.goatfinder.builder.GoatAnalyzerTest.testStandardDeviation(GoatAnalyzerTest.java:57)
+
